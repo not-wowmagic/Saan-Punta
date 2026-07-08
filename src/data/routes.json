@@ -1,0 +1,930 @@
+{
+  "_comment": "Manually curated route network for Saan Punta. Coordinates are real positions for the PLV area and Metro Manila nodes.",
+  "nodes": [
+    {
+      "id": "plv",
+      "name": "Pamantasan ng Lungsod ng Valenzuela (PLV)",
+      "lat": 14.6993,
+      "lng": 120.9754
+    },
+    {
+      "id": "val_city_hall",
+      "name": "Valenzuela City Hall",
+      "lat": 14.6812,
+      "lng": 120.9763
+    },
+    {
+      "id": "monumento",
+      "name": "Monumento (Caloocan)",
+      "lat": 14.6574,
+      "lng": 120.9842
+    },
+    {
+      "id": "novaliches_term",
+      "name": "Novaliches Terminal",
+      "lat": 14.7291,
+      "lng": 121.0426
+    },
+    {
+      "id": "sm_fairview",
+      "name": "SM Fairview",
+      "lat": 14.7350,
+      "lng": 121.0585
+    },
+    {
+      "id": "balintawak_lrt",
+      "name": "Balintawak LRT Station",
+      "lat": 14.6578,
+      "lng": 121.0076
+    },
+    {
+      "id": "malanday_term",
+      "name": "Malanday Terminal",
+      "lat": 14.7194,
+      "lng": 120.9547
+    },
+    {
+      "id": "fatima_val",
+      "name": "Our Lady of Fatima University (OLFU)",
+      "lat": 14.6780,
+      "lng": 120.9808
+    },
+    {
+      "id": "karuhatan_junc",
+      "name": "Karuhatan Junction",
+      "lat": 14.6885,
+      "lng": 120.9758
+    },
+    {
+      "id": "vgc_term",
+      "name": "Valenzuela Gateway Complex (VGC)",
+      "lat": 14.7116,
+      "lng": 120.9935
+    },
+    {
+      "id": "paso_de_blas",
+      "name": "Paso de Blas Road",
+      "lat": 14.7001,
+      "lng": 120.9961
+    },
+    {
+      "id": "roosevelt_lrt",
+      "name": "Roosevelt (FPJ) LRT Station",
+      "lat": 14.6575,
+      "lng": 121.0211
+    },
+    {
+      "id": "meycauayan",
+      "name": "Meycauayan (Bulacan)",
+      "lat": 14.7397,
+      "lng": 120.9576
+    },
+    {
+      "id": "sm_north",
+      "name": "SM North EDSA / Trinoma",
+      "lat": 14.6567,
+      "lng": 121.0315
+    },
+    {
+      "id": "recto",
+      "name": "Recto Avenue (LRT Doroteo Jose)",
+      "lat": 14.6042,
+      "lng": 120.9822
+    },
+    {
+      "id": "divisoria",
+      "name": "Divisoria (Manila)",
+      "lat": 14.6062,
+      "lng": 120.9707
+    },
+    {
+      "id": "binondo",
+      "name": "Binondo (Manila Chinatown)",
+      "lat": 14.6006,
+      "lng": 120.9752
+    },
+    {
+      "id": "intramuros",
+      "name": "Intramuros (Manila)",
+      "lat": 14.5910,
+      "lng": 120.9782
+    }
+  ],
+  "legs": [
+    {
+      "id": "leg-1",
+      "from": "plv",
+      "to": "val_city_hall",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 2.2,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride along McArthur Highway."
+    },
+    {
+      "id": "leg-2",
+      "from": "plv",
+      "to": "val_city_hall",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 2.0,
+      "fare_type": null,
+      "notes": "Walk along McArthur Highway."
+    },
+    {
+      "id": "leg-3",
+      "from": "plv",
+      "to": "val_city_hall",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 2.2,
+      "fare_type": "taxi",
+      "notes": "Direct taxi ride, variable based on traffic conditions."
+    },
+    {
+      "id": "leg-4",
+      "from": "val_city_hall",
+      "to": "monumento",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 3.1,
+      "fare_type": "modern",
+      "notes": "Modern jeepney (E-jeep) offering air-conditioned comfort."
+    },
+    {
+      "id": "leg-5",
+      "from": "val_city_hall",
+      "to": "monumento",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.1,
+      "fare_type": "estimate",
+      "notes": "Fast motorcycle taxi option (MoveIt / Angkas)."
+    },
+    {
+      "id": "leg-6",
+      "from": "plv",
+      "to": "val_city_hall",
+      "mode": "tricycle",
+      "route_name": "PLV TODA",
+      "distance_km": 2.2,
+      "fare_type": "tricycle",
+      "flat_fare": 50.0,
+      "notes": "Local tricycle ride. Flat fare negotiated locally."
+    },
+    {
+      "id": "leg-7",
+      "from": "monumento",
+      "to": "novaliches_term",
+      "mode": "jeepney",
+      "route_name": "Monumento - Novaliches via Quirino",
+      "distance_km": 12.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride traversing Quirino Highway."
+    },
+    {
+      "id": "leg-8",
+      "from": "novaliches_term",
+      "to": "sm_fairview",
+      "mode": "jeepney",
+      "route_name": "Novaliches - SM Fairview",
+      "distance_km": 3.2,
+      "fare_type": "modern",
+      "notes": "Short modern jeepney transfer to SM Fairview."
+    },
+    {
+      "id": "leg-9",
+      "from": "monumento",
+      "to": "sm_fairview",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 15.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi via Quirino Highway."
+    },
+    {
+      "id": "leg-10",
+      "from": "monumento",
+      "to": "sm_fairview",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 15.5,
+      "fare_type": "estimate",
+      "notes": "Motorcycle ride bypassing major traffic points."
+    },
+    {
+      "id": "leg-11",
+      "from": "monumento",
+      "to": "balintawak_lrt",
+      "mode": "train",
+      "route_name": "LRT-1",
+      "distance_km": 2.4,
+      "fare_type": "estimate",
+      "notes": "LRT-1 train transit between Monumento and Balintawak stations."
+    },
+    {
+      "id": "leg-12",
+      "from": "malanday_term",
+      "to": "plv",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 2.7,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from Malanday Terminal to PLV."
+    },
+    {
+      "id": "leg-13",
+      "from": "malanday_term",
+      "to": "plv",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 2.7,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney from Malanday to PLV."
+    },
+    {
+      "id": "leg-14",
+      "from": "plv",
+      "to": "karuhatan_junc",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 1.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride to Karuhatan Junction."
+    },
+    {
+      "id": "leg-15",
+      "from": "plv",
+      "to": "karuhatan_junc",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 1.5,
+      "fare_type": "modern",
+      "notes": "Modern jeepney ride to Karuhatan Junction."
+    },
+    {
+      "id": "leg-16",
+      "from": "karuhatan_junc",
+      "to": "val_city_hall",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 1.0,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride to Valenzuela City Hall."
+    },
+    {
+      "id": "leg-17",
+      "from": "karuhatan_junc",
+      "to": "val_city_hall",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 1.0,
+      "fare_type": "modern",
+      "notes": "Modern jeepney ride to Valenzuela City Hall."
+    },
+    {
+      "id": "leg-18",
+      "from": "val_city_hall",
+      "to": "fatima_val",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 0.8,
+      "fare_type": "traditional",
+      "notes": "Short traditional jeepney ride to OLFU Valenzuela."
+    },
+    {
+      "id": "leg-19",
+      "from": "val_city_hall",
+      "to": "fatima_val",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 0.8,
+      "fare_type": "modern",
+      "notes": "Short modern air-conditioned jeepney ride to OLFU Valenzuela."
+    },
+    {
+      "id": "leg-20",
+      "from": "fatima_val",
+      "to": "monumento",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 2.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from Fatima to Monumento."
+    },
+    {
+      "id": "leg-21",
+      "from": "fatima_val",
+      "to": "monumento",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 2.5,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney from Fatima to Monumento."
+    },
+    {
+      "id": "leg-22",
+      "from": "karuhatan_junc",
+      "to": "vgc_term",
+      "mode": "jeepney",
+      "route_name": "Karuhatan - Ugong",
+      "distance_km": 3.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney through Karuhatan Road and Paso de Blas."
+    },
+    {
+      "id": "leg-23",
+      "from": "karuhatan_junc",
+      "to": "vgc_term",
+      "mode": "tricycle",
+      "route_name": "Karuhatan TODA",
+      "distance_km": 3.5,
+      "fare_type": "tricycle",
+      "flat_fare": 80.0,
+      "notes": "Tricycle ride. Special fare is ₱80.00, regular shared is ₱25.00."
+    },
+    {
+      "id": "leg-24",
+      "from": "plv",
+      "to": "karuhatan_junc",
+      "mode": "tricycle",
+      "route_name": "PLV TODA",
+      "distance_km": 1.5,
+      "fare_type": "tricycle",
+      "flat_fare": 50.0,
+      "notes": "Tricycle ride. Special fare is ₱50.00, regular shared is ₱12.00."
+    },
+    {
+      "id": "leg-25",
+      "from": "plv",
+      "to": "paso_de_blas",
+      "mode": "tricycle",
+      "route_name": "PLV TODA",
+      "distance_km": 3.0,
+      "fare_type": "tricycle",
+      "flat_fare": 70.0,
+      "notes": "Tricycle ride. Special fare is ₱70.00, regular shared is ₱20.00."
+    },
+    {
+      "id": "leg-26",
+      "from": "vgc_term",
+      "to": "paso_de_blas",
+      "mode": "tricycle",
+      "route_name": "VGC TODA",
+      "distance_km": 1.2,
+      "fare_type": "tricycle",
+      "flat_fare": 35.0,
+      "notes": "Short tricycle ride. Special fare is ₱35.00, regular shared is ₱10.00."
+    },
+    {
+      "id": "leg-27",
+      "from": "malanday_term",
+      "to": "monumento",
+      "mode": "bus",
+      "route_name": "Malanday - Monumento Bus",
+      "distance_km": 8.2,
+      "fare_type": "ordinary",
+      "notes": "Ordinary public bus along McArthur Highway."
+    },
+    {
+      "id": "leg-28",
+      "from": "malanday_term",
+      "to": "monumento",
+      "mode": "bus",
+      "route_name": "Malanday - Monumento Bus",
+      "distance_km": 8.2,
+      "fare_type": "aircon",
+      "notes": "Air-conditioned public bus along McArthur Highway."
+    },
+    {
+      "id": "leg-29",
+      "from": "vgc_term",
+      "to": "monumento",
+      "mode": "bus",
+      "route_name": "VGC - Monumento Bus",
+      "distance_km": 8.5,
+      "fare_type": "ordinary",
+      "notes": "Ordinary bus traversing Paso de Blas and MacArthur Highway."
+    },
+    {
+      "id": "leg-30",
+      "from": "vgc_term",
+      "to": "monumento",
+      "mode": "bus",
+      "route_name": "VGC - Monumento Bus",
+      "distance_km": 8.5,
+      "fare_type": "aircon",
+      "notes": "Air-conditioned bus traversing Paso de Blas and MacArthur Highway."
+    },
+    {
+      "id": "leg-31",
+      "from": "vgc_term",
+      "to": "roosevelt_lrt",
+      "mode": "bus",
+      "route_name": "VGC - SM North/Trinoma (via NLEX)",
+      "distance_km": 11.5,
+      "fare_type": "aircon",
+      "notes": "Direct air-conditioned bus via NLEX to Roosevelt LRT / EDSA."
+    },
+    {
+      "id": "leg-32",
+      "from": "monumento",
+      "to": "sm_fairview",
+      "mode": "bus",
+      "route_name": "Monumento - SM Fairview Bus",
+      "distance_km": 15.5,
+      "fare_type": "aircon",
+      "notes": "Air-conditioned bus via Quirino Highway."
+    },
+    {
+      "id": "leg-33",
+      "from": "balintawak_lrt",
+      "to": "roosevelt_lrt",
+      "mode": "train",
+      "route_name": "LRT-1",
+      "distance_km": 1.8,
+      "fare_type": "estimate",
+      "notes": "LRT-1 train transit between Balintawak and Roosevelt (FPJ) stations."
+    },
+    {
+      "id": "leg-34",
+      "from": "plv",
+      "to": "karuhatan_junc",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 1.4,
+      "fare_type": null,
+      "notes": "Walk along McArthur Highway."
+    },
+    {
+      "id": "leg-35",
+      "from": "malanday_term",
+      "to": "monumento",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 8.2,
+      "fare_type": "traditional",
+      "notes": "Direct traditional jeepney ride along McArthur Highway."
+    },
+    {
+      "id": "leg-36",
+      "from": "malanday_term",
+      "to": "monumento",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 8.2,
+      "fare_type": "modern",
+      "notes": "Direct modern air-conditioned jeepney ride along McArthur Highway."
+    },
+    {
+      "id": "leg-37",
+      "from": "vgc_term",
+      "to": "malanday_term",
+      "mode": "jeepney",
+      "route_name": "VGC - Malanday via Paso de Blas",
+      "distance_km": 5.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from VGC to Malanday Terminal."
+    },
+    {
+      "id": "leg-38",
+      "from": "malanday_term",
+      "to": "roosevelt_lrt",
+      "mode": "bus",
+      "route_name": "Malanday - Monumento - Roosevelt Bus",
+      "distance_km": 12.0,
+      "fare_type": "aircon",
+      "notes": "Air-conditioned bus traversing McArthur Highway and EDSA."
+    },
+    {
+      "id": "leg-39",
+      "from": "monumento",
+      "to": "roosevelt_lrt",
+      "mode": "jeepney",
+      "route_name": "Monumento - Muñoz",
+      "distance_km": 4.2,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney traversing EDSA to Roosevelt."
+    },
+    {
+      "id": "leg-40",
+      "from": "paso_de_blas",
+      "to": "novaliches_term",
+      "mode": "jeepney",
+      "route_name": "Malinta - Novaliches",
+      "distance_km": 7.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney traversing Paso de Blas Road and Quirino Highway."
+    },
+    {
+      "id": "leg-41",
+      "from": "vgc_term",
+      "to": "sm_fairview",
+      "mode": "bus",
+      "route_name": "VGC - Fairview Bus",
+      "distance_km": 14.5,
+      "fare_type": "aircon",
+      "notes": "Air-conditioned provincial/city bus connecting VGC to SM Fairview."
+    },
+    {
+      "id": "leg-42",
+      "from": "malanday_term",
+      "to": "fatima_val",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 5.7,
+      "fare_type": "traditional",
+      "notes": "Direct traditional jeepney along McArthur Highway."
+    },
+    {
+      "id": "leg-43",
+      "from": "malanday_term",
+      "to": "fatima_val",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 5.7,
+      "fare_type": "modern",
+      "notes": "Direct modern jeepney along McArthur Highway."
+    },
+    {
+      "id": "leg-44",
+      "from": "plv",
+      "to": "monumento",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 5.5,
+      "fare_type": "traditional",
+      "notes": "Direct traditional jeepney to Monumento."
+    },
+    {
+      "id": "leg-45",
+      "from": "plv",
+      "to": "monumento",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 5.5,
+      "fare_type": "modern",
+      "notes": "Direct modern jeepney to Monumento."
+    },
+    {
+      "id": "leg-46",
+      "from": "meycauayan",
+      "to": "malanday_term",
+      "mode": "jeepney",
+      "route_name": "Meycauayan - Monumento",
+      "distance_km": 2.2,
+      "fare_type": "traditional",
+      "notes": "Jeepney ride entering Valenzuela from Bulacan."
+    },
+    {
+      "id": "leg-47",
+      "from": "meycauayan",
+      "to": "malanday_term",
+      "mode": "jeepney",
+      "route_name": "Meycauayan - Monumento",
+      "distance_km": 2.2,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney from Meycauayan."
+    },
+    {
+      "id": "leg-48",
+      "from": "monumento",
+      "to": "sm_north",
+      "mode": "bus",
+      "route_name": "EDSA Carousel",
+      "distance_km": 5.5,
+      "fare_type": "aircon",
+      "notes": "EDSA Carousel bus service from Monumento to North Avenue."
+    },
+    {
+      "id": "leg-49",
+      "from": "monumento",
+      "to": "sm_north",
+      "mode": "jeepney",
+      "route_name": "Monumento - Muñoz - SM North",
+      "distance_km": 5.8,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney traversing EDSA to SM North."
+    },
+    {
+      "id": "leg-50",
+      "from": "malanday_term",
+      "to": "divisoria",
+      "mode": "jeepney",
+      "route_name": "Malanday - Divisoria",
+      "distance_km": 14.5,
+      "fare_type": "traditional",
+      "notes": "Direct traditional jeepney traversing McArthur Highway and Rizal Avenue."
+    },
+    {
+      "id": "leg-51",
+      "from": "malanday_term",
+      "to": "recto",
+      "mode": "jeepney",
+      "route_name": "Malanday - Recto",
+      "distance_km": 14.2,
+      "fare_type": "traditional",
+      "notes": "Direct traditional jeepney traversing McArthur Highway to Recto Avenue."
+    },
+    {
+      "id": "leg-52",
+      "from": "monumento",
+      "to": "divisoria",
+      "mode": "jeepney",
+      "route_name": "Monumento - Divisoria",
+      "distance_km": 6.3,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from Monumento to Divisoria via Rizal Ave/Abad Santos."
+    },
+    {
+      "id": "leg-53",
+      "from": "monumento",
+      "to": "recto",
+      "mode": "jeepney",
+      "route_name": "Monumento - Recto",
+      "distance_km": 6.0,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from Monumento to Recto via Rizal Ave."
+    },
+    {
+      "id": "leg-54",
+      "from": "monumento",
+      "to": "recto",
+      "mode": "train",
+      "route_name": "LRT-1",
+      "distance_km": 6.0,
+      "fare_type": "estimate",
+      "notes": "LRT-1 train transit between Monumento and Doroteo Jose (Recto) stations."
+    },
+    {
+      "id": "leg-55",
+      "from": "roosevelt_lrt",
+      "to": "sm_north",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 1.0,
+      "fare_type": null,
+      "notes": "Walk from FPJ / Roosevelt Station to SM North EDSA."
+    },
+    {
+      "id": "leg-56",
+      "from": "vgc_term",
+      "to": "sm_north",
+      "mode": "bus",
+      "route_name": "VGC - SM North via NLEX",
+      "distance_km": 12.5,
+      "fare_type": "aircon",
+      "notes": "Air-conditioned bus via NLEX and Mindanao Avenue."
+    },
+    {
+      "id": "leg-57",
+      "from": "recto",
+      "to": "divisoria",
+      "mode": "jeepney",
+      "route_name": "Gasak - Recto",
+      "distance_km": 1.5,
+      "fare_type": "traditional",
+      "notes": "Short traditional jeepney ride along Recto Avenue."
+    },
+    {
+      "id": "leg-58",
+      "from": "balintawak_lrt",
+      "to": "sm_north",
+      "mode": "bus",
+      "route_name": "EDSA Carousel",
+      "distance_km": 3.1,
+      "fare_type": "aircon",
+      "notes": "EDSA Carousel bus from Balintawak to North Avenue."
+    },
+    {
+      "id": "leg-59",
+      "from": "roosevelt_lrt",
+      "to": "sm_north",
+      "mode": "jeepney",
+      "route_name": "Muñoz - SM North",
+      "distance_km": 1.2,
+      "fare_type": "traditional",
+      "notes": "Short jeepney ride from Roosevelt to SM North."
+    },
+    {
+      "id": "leg-60",
+      "from": "vgc_term",
+      "to": "novaliches_term",
+      "mode": "jeepney",
+      "route_name": "VGC - Novaliches via Bagbaguin",
+      "distance_km": 7.0,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride traversing Bagbaguin and Quirino Highway."
+    },
+    {
+      "id": "leg-61",
+      "from": "karuhatan_junc",
+      "to": "novaliches_term",
+      "mode": "jeepney",
+      "route_name": "Malinta - Novaliches",
+      "distance_km": 11.5,
+      "fare_type": "traditional",
+      "notes": "Jeepney ride from Karuhatan/Malinta to Novaliches via Paso de Blas."
+    },
+    {
+      "id": "leg-62",
+      "from": "vgc_term",
+      "to": "monumento",
+      "mode": "jeepney",
+      "route_name": "VGC - Monumento via MacArthur",
+      "distance_km": 8.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney traversing Paso de Blas and MacArthur Highway."
+    },
+    {
+      "id": "leg-63",
+      "from": "monumento",
+      "to": "balintawak_lrt",
+      "mode": "jeepney",
+      "route_name": "Monumento - Balintawak",
+      "distance_km": 2.4,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride traversing EDSA to Balintawak."
+    },
+    {
+      "id": "leg-64",
+      "from": "balintawak_lrt",
+      "to": "roosevelt_lrt",
+      "mode": "jeepney",
+      "route_name": "Monumento - Muñoz",
+      "distance_km": 1.8,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney traversing EDSA from Balintawak to Roosevelt."
+    },
+    {
+      "id": "leg-65",
+      "from": "meycauayan",
+      "to": "monumento",
+      "mode": "jeepney",
+      "route_name": "Meycauayan - Monumento",
+      "distance_km": 10.4,
+      "fare_type": "traditional",
+      "notes": "Direct traditional jeepney traversing MacArthur Highway."
+    },
+    {
+      "id": "leg-66",
+      "from": "meycauayan",
+      "to": "monumento",
+      "mode": "jeepney",
+      "route_name": "Meycauayan - Monumento",
+      "distance_km": 10.4,
+      "fare_type": "modern",
+      "notes": "Direct modern air-conditioned jeepney traversing MacArthur Highway."
+    },
+    {
+      "id": "leg-67",
+      "from": "novaliches_term",
+      "to": "sm_fairview",
+      "mode": "jeepney",
+      "route_name": "Novaliches - SM Fairview",
+      "distance_km": 3.2,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride to SM Fairview."
+    },
+    {
+      "id": "leg-68",
+      "from": "recto",
+      "to": "divisoria",
+      "mode": "jeepney",
+      "route_name": "Gasak - Recto",
+      "distance_km": 1.5,
+      "fare_type": "modern",
+      "notes": "Short modern air-conditioned jeepney ride along Recto Avenue."
+    },
+    {
+      "id": "leg-69",
+      "from": "malanday_term",
+      "to": "karuhatan_junc",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 4.2,
+      "fare_type": "traditional",
+      "notes": "Direct traditional jeepney from Malanday to Karuhatan Junction."
+    },
+    {
+      "id": "leg-70",
+      "from": "malanday_term",
+      "to": "karuhatan_junc",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 4.2,
+      "fare_type": "modern",
+      "notes": "Direct modern jeepney from Malanday to Karuhatan Junction."
+    },
+    {
+      "id": "leg-71",
+      "from": "plv",
+      "to": "fatima_val",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 3.3,
+      "fare_type": "traditional",
+      "notes": "Direct traditional jeepney from PLV to Fatima University."
+    },
+    {
+      "id": "leg-72",
+      "from": "plv",
+      "to": "fatima_val",
+      "mode": "jeepney",
+      "route_name": "Malanday - Monumento",
+      "distance_km": 3.3,
+      "fare_type": "modern",
+      "notes": "Direct modern jeepney from PLV to Fatima University."
+    },
+    {
+      "id": "leg-73",
+      "from": "vgc_term",
+      "to": "paso_de_blas",
+      "mode": "jeepney",
+      "route_name": "Malinta - Novaliches",
+      "distance_km": 1.2,
+      "fare_type": "traditional",
+      "notes": "Short traditional jeepney ride along Paso de Blas Road."
+    },
+    {
+      "id": "leg-74",
+      "from": "divisoria",
+      "to": "binondo",
+      "mode": "jeepney",
+      "route_name": "Divisoria - Baclaran",
+      "distance_km": 1.0,
+      "fare_type": "traditional",
+      "notes": "Short jeepney ride traversing Juan Luna Street."
+    },
+    {
+      "id": "leg-75",
+      "from": "divisoria",
+      "to": "binondo",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 0.8,
+      "fare_type": null,
+      "notes": "Walk along Juan Luna Street."
+    },
+    {
+      "id": "leg-76",
+      "from": "malanday_term",
+      "to": "binondo",
+      "mode": "jeepney",
+      "route_name": "Malanday - Divisoria",
+      "distance_km": 13.8,
+      "fare_type": "traditional",
+      "notes": "Direct traditional jeepney traversing McArthur Highway and Rizal Avenue."
+    },
+    {
+      "id": "leg-77",
+      "from": "monumento",
+      "to": "binondo",
+      "mode": "jeepney",
+      "route_name": "Monumento - Divisoria",
+      "distance_km": 5.8,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from Monumento via Abad Santos."
+    },
+    {
+      "id": "leg-78",
+      "from": "binondo",
+      "to": "intramuros",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 1.0,
+      "fare_type": null,
+      "notes": "Walk across Jones Bridge into Intramuros."
+    },
+    {
+      "id": "leg-79",
+      "from": "binondo",
+      "to": "intramuros",
+      "mode": "jeepney",
+      "route_name": "Divisoria - Baclaran",
+      "distance_km": 1.2,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride crossing Jones Bridge."
+    },
+    {
+      "id": "leg-80",
+      "from": "recto",
+      "to": "intramuros",
+      "mode": "jeepney",
+      "route_name": "Retiro - Pier 15",
+      "distance_km": 2.2,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney heading to Intramuros."
+    },
+    {
+      "id": "leg-81",
+      "from": "recto",
+      "to": "intramuros",
+      "mode": "train",
+      "route_name": "LRT-1",
+      "distance_km": 2.0,
+      "fare_type": "estimate",
+      "notes": "LRT-1 train from Doroteo Jose (Recto) to Central Terminal (Intramuros)."
+    }
+  ]
+}

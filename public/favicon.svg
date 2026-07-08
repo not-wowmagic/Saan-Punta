@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Premium Dark Slate circular background -->
+  <circle cx="256" cy="256" r="240" fill="#0f172a" stroke="#1e293b" stroke-width="14" />
+  
+  <!-- Sleek Route Finder Map Pin in Indigo/Blue theme (no gradients, clean modern fill) -->
+  <path fill="#4f46e5" stroke="#ffffff" stroke-width="8" d="M256 90c-71.8 0-130 58.2-130 130 0 95 130 202 130 202s130-107 130-202c0-71.8-58.2-130-130-130zm0 175c-24.8 0-45-20.2-45-45s20.2-45 45-45 45 20.2 45 45-20.2 45-45 45z"/>
+  
+  <!-- Outer glowing concentric circle matching the premium theme -->
+  <circle cx="256" cy="256" r="248" fill="none" stroke="#3b82f6" stroke-width="6" opacity="0.4" />
+</svg>
