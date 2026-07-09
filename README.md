@@ -81,7 +81,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed.
 ### Setup and Development Run
 1. Navigate to the root project folder:
    ```bash
-   cd "c:\Users\Gab\Downloads\Saan Punta"
+   cd saan-punta
    ```
 2. Install npm packages:
    ```bash
@@ -91,4 +91,4 @@ Make sure you have [Node.js](https://nodejs.org/) installed.
    ```bash
    npm run dev
    ```
-4. Open the displayed local server link (usually `http://localhost:5173`) in your browser.
+4. Open the displayed local server link in your browser.
