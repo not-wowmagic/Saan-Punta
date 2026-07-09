@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { ArrowUpDown, GraduationCap, Settings, ChevronDown, ChevronUp } from 'lucide-react';
 import SearchableDropdown from './SearchableDropdown';
 
-export default function RouteSearch({
+function RouteSearch({
   nodes,
   startNode,
   setStartNode,
@@ -185,3 +185,5 @@ export default function RouteSearch({
     </div>
   );
 }
+
+export default memo(RouteSearch);

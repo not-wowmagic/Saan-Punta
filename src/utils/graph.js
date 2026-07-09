@@ -14,6 +14,16 @@ export function findPaths(legs, startNodeId, endNodeId) {
     return [];
   }
 
+  // ponytail: Pre-build adjacency list once to achieve O(V + E) lookup rather than O(E * V) scanning
+  const adj = new Map();
+  for (const leg of legs) {
+    if (!adj.has(leg.from)) adj.set(leg.from, []);
+    if (!adj.has(leg.to)) adj.set(leg.to, []);
+    
+    adj.get(leg.from).push({ leg, nextNodeId: leg.to, isReversed: false });
+    adj.get(leg.to).push({ leg, nextNodeId: leg.from, isReversed: true });
+  }
+
   const paths = [];
   const visited = new Set();
 
@@ -30,19 +40,9 @@ export function findPaths(legs, startNodeId, endNodeId) {
 
     visited.add(currentNodeId);
 
-    for (const leg of legs) {
-      let nextNodeId = null;
-      let isReversed = false;
-
-      if (leg.from === currentNodeId) {
-        nextNodeId = leg.to;
-        isReversed = false;
-      } else if (leg.to === currentNodeId) {
-        nextNodeId = leg.from;
-        isReversed = true;
-      }
-
-      if (nextNodeId && !visited.has(nextNodeId)) {
+    const neighbors = adj.get(currentNodeId) || [];
+    for (const { leg, nextNodeId, isReversed } of neighbors) {
+      if (!visited.has(nextNodeId)) {
         // Prevent using the same leg twice in one path
         if (!currentPath.some(step => step.leg.id === leg.id)) {
           currentPath.push({ leg, nextNodeId, isReversed });

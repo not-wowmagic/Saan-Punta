@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 import { Route } from 'lucide-react';
 import routesData from './data/routes.json';
 import { getSortedRoutes } from './utils/graph';
@@ -6,7 +6,9 @@ import DisclaimerBanner from './components/DisclaimerBanner';
 import DisclaimerModal from './components/DisclaimerModal';
 import RouteSearch from './components/RouteSearch';
 import RouteList from './components/RouteList';
-import RouteMap from './components/RouteMap';
+
+const RouteMap = lazy(() => import('./components/RouteMap'));
+
 
 export default function App() {
   const { nodes, legs } = routesData;
@@ -23,15 +25,25 @@ export default function App() {
   const [selectedRouteIndex, setSelectedRouteIndex] = useState(0);
   const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 
-  // Calculate sorted routes when start, destination, discount status, or transport preferences change
-  const allRoutes = getSortedRoutes(legs, startNode, destinationNode, isDiscounted, {
-    tricycleMode,
-    busPreference,
-    trainPreference
-  });
+  // ponytail: Pre-build an O(1) index map for node lookups to avoid O(N) array search on every render/leg
+  const nodesById = useMemo(() => {
+    return Object.fromEntries(nodes.map(n => [n.id, n]));
+  }, [nodes]);
+
+  // ponytail: memoize route computation and display list to prevent recalculations on every render
+  const allRoutes = useMemo(() => {
+    if (!startNode || !destinationNode || startNode === destinationNode) {
+      return [];
+    }
+    return getSortedRoutes(legs, startNode, destinationNode, isDiscounted, {
+      tricycleMode,
+      busPreference,
+      trainPreference
+    });
+  }, [legs, startNode, destinationNode, isDiscounted, tricycleMode, busPreference, trainPreference]);
 
   // Limit display to the top 15 routes to avoid performance/rendering lag
-  const routes = allRoutes.slice(0, 15);
+  const routes = useMemo(() => allRoutes.slice(0, 15), [allRoutes]);
 
   // Reset selected route index when any routing input changes
   useEffect(() => {
@@ -42,9 +54,6 @@ export default function App() {
 
   return (
     <div className="app-container">
-      {/* Persistent Disclaimer Banner */}
-      <DisclaimerBanner onOpenModal={() => setIsDisclaimerOpen(true)} />
-
       {/* Main Branding Header */}
       <header className="app-header">
         <div className="header-content">
@@ -85,7 +94,7 @@ export default function App() {
             totalRoutesCount={allRoutes.length}
             selectedRouteIndex={selectedRouteIndex}
             setSelectedRouteIndex={setSelectedRouteIndex}
-            nodes={nodes}
+            nodesById={nodesById}
             startNode={startNode}
             destinationNode={destinationNode}
           />
@@ -93,12 +102,23 @@ export default function App() {
 
         {/* Map Visualization */}
         <section className="map-panel">
-          <RouteMap
-            activeRoute={activeRoute}
-            allNodes={nodes}
-          />
+          <Suspense fallback={
+            <div className="status-placeholder glass-card animate-fade-in" style={{ height: '100%' }}>
+              <h3>Loading Map...</h3>
+            </div>
+          }>
+            <RouteMap
+              activeRoute={activeRoute}
+              nodesById={nodesById}
+              allNodes={nodes}
+            />
+          </Suspense>
         </section>
       </main>
+
+
+      {/* Persistent Disclaimer Footer */}
+      <DisclaimerBanner onOpenModal={() => setIsDisclaimerOpen(true)} />
 
       {/* Acknowledgment Modal (First-load auto-popup or manually reopened) */}
       <DisclaimerModal

@@ -1,7 +1,9 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import { Lock, Unlock } from 'lucide-react';
+import { MODE_COLORS, MODE_LABELS } from '../utils/constants';
 
 // Fix Vite asset loader resolving for Leaflet marker icon images
 import iconUrl from 'leaflet/dist/images/marker-icon.png';
@@ -48,26 +50,6 @@ const DEST_MARKER_ICON = createPinMarker("#4f46e5", "B");  // Deep Indigo pin wi
 const TRANSFER_MARKER_ICON = createPinMarker("#3b82f6", "T"); // Blue pin with 'T'
 const GENERIC_MARKER_ICON = createPinMarker("#6b7280", "•"); // Grey pin for other points
 
-const MODE_COLORS = {
-  jeepney: "#3b82f6",     // Blue
-  bus: "#db2777",         // Rose/Pink
-  train: "#8b5cf6",       // Purple
-  taxi: "#dc2626",        // Red
-  moto_taxi: "#06b6d4",   // Cyan
-  walk: "#9ca3af",        // Muted Grey/Silver
-  tricycle: "#f97316"     // Orange
-};
-
-const MODE_LABELS = {
-  jeepney: "Jeepney",
-  bus: "Public Bus",
-  train: "LRT/MRT",
-  taxi: "Taxi",
-  moto_taxi: "MC Taxi (MoveIt/Angkas)",
-  walk: "Walk",
-  tricycle: "Tricycle"
-};
-
 // Component to handle auto-fitting map view boundaries to the active route
 function MapBoundsUpdater({ bounds }) {
   const map = useMap();
@@ -86,12 +68,61 @@ function MapBoundsUpdater({ bounds }) {
   return null;
 }
 
-export default function RouteMap({ activeRoute, allNodes }) {
-  const [mapCenter, setMapCenter] = useState([14.6812, 120.9763]); // Default Valenzuela coordinates
-  const [mapZoom, setMapZoom] = useState(13);
+// ponytail: module-level cache that persists in localStorage, capped at 200 entries to protect quota limits
+const MAX_CACHE_SIZE = 200;
+const roadCoordsCache = new Map();
+try {
+  const cached = localStorage.getItem('saan_punta_road_coords_cache');
+  if (cached) {
+    const parsed = JSON.parse(cached);
+    const entries = Array.isArray(parsed) ? parsed : Object.entries(parsed);
+    for (const [k, v] of entries) {
+      roadCoordsCache.set(k, v);
+    }
+  }
+} catch (e) {
+  console.warn("Failed to load road coords cache from localStorage", e);
+}
+
+function saveCoordsCache() {
+  try {
+    if (roadCoordsCache.size > MAX_CACHE_SIZE) {
+      // Evict oldest entries
+      const keysToEvict = Array.from(roadCoordsCache.keys()).slice(0, roadCoordsCache.size - MAX_CACHE_SIZE);
+      for (const key of keysToEvict) {
+        roadCoordsCache.delete(key);
+      }
+    }
+    localStorage.setItem('saan_punta_road_coords_cache', JSON.stringify(Array.from(roadCoordsCache.entries())));
+  } catch (e) {
+    console.warn("Failed to save road coords cache to localStorage", e);
+  }
+}
+
+// ponytail: control Leaflet drag/zoom interactions dynamically
+function MapInteractionController({ isLocked }) {
+  const map = useMap();
+  useEffect(() => {
+    if (isLocked) {
+      map.dragging.disable();
+      map.touchZoom.disable();
+      map.doubleClickZoom.disable();
+      if (map.tap) map.tap.disable();
+    } else {
+      map.dragging.enable();
+      map.touchZoom.enable();
+      map.doubleClickZoom.enable();
+      if (map.tap) map.tap.enable();
+    }
+  }, [isLocked, map]);
+  return null;
+}
+
+function RouteMap({ activeRoute, nodesById, allNodes }) {
+  const mapCenter = [14.6812, 120.9763]; // Default Valenzuela coordinates
+  const mapZoom = 13;
+  const [isMapLocked, setIsMapLocked] = useState(window.innerWidth <= 768);
   
-  // Cache to store road-accurate coordinates for each leg to avoid redundant API hits
-  const roadCoordsCache = useRef({});
   // State to hold current active route leg coordinates
   const [legCoordinates, setLegCoordinates] = useState({});
 
@@ -108,16 +139,17 @@ export default function RouteMap({ activeRoute, allNodes }) {
     const timer = setTimeout(() => {
       const fetchRoadRoute = async () => {
         const fetchPromises = activeRoute.legs.map(async (step) => {
-          const fromNodeObj = allNodes.find(n => n.id === step.fromNode);
-          const toNodeObj = allNodes.find(n => n.id === step.toNode);
+          // ponytail: O(1) node lookup dictionary
+          const fromNodeObj = nodesById[step.fromNode];
+          const toNodeObj = nodesById[step.toNode];
 
           if (!fromNodeObj || !toNodeObj) return null;
 
           const legKey = `${step.leg.id}-${step.fromNode}-${step.toNode}`;
           
           // Check cache first
-          if (roadCoordsCache.current[legKey]) {
-            return { id: step.leg.id, coords: roadCoordsCache.current[legKey] };
+          if (roadCoordsCache.has(legKey)) {
+            return { id: step.leg.id, coords: roadCoordsCache.get(legKey) };
           }
 
           // Fallback is straight line
@@ -128,26 +160,57 @@ export default function RouteMap({ activeRoute, allNodes }) {
 
           // For walking, draw a straight line directly to avoid overloading routing API
           if (step.leg.mode === 'walk') {
-            roadCoordsCache.current[legKey] = fallbackCoords;
+            roadCoordsCache.set(legKey, fallbackCoords);
+            saveCoordsCache();
             return { id: step.leg.id, coords: fallbackCoords };
           }
 
+          let coords = null;
+          const directUrl = `https://router.project-osrm.org/route/v1/driving/${fromNodeObj.lng},${fromNodeObj.lat};${toNodeObj.lng},${toNodeObj.lat}?overview=full&geometries=geojson`;
+          const proxyUrl = `https://corsproxy.io/?https://router.project-osrm.org/route/v1/driving/${fromNodeObj.lng},${fromNodeObj.lat};${toNodeObj.lng},${toNodeObj.lat}?overview=full&geometries=geojson`;
+
+          // Try direct first with timeout
           try {
-            // OSRM expects: longitude,latitude;longitude,latitude
-            const url = `https://corsproxy.io/?https://router.project-osrm.org/route/v1/driving/${fromNodeObj.lng},${fromNodeObj.lat};${toNodeObj.lng},${toNodeObj.lat}?overview=full&geometries=geojson`;
-            const response = await fetch(url);
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 5000);
+            const response = await fetch(directUrl, { signal: controller.signal });
+            clearTimeout(timeoutId);
             
-            if (!response.ok) throw new Error("OSRM response not ok");
-            const data = await response.json();
-            
-            if (data.code === 'Ok' && data.routes && data.routes[0]) {
-              const geojsonCoords = data.routes[0].geometry.coordinates;
-              const leafletCoords = geojsonCoords.map(coord => [coord[1], coord[0]]);
-              roadCoordsCache.current[legKey] = leafletCoords;
-              return { id: step.leg.id, coords: leafletCoords };
+            if (response.ok) {
+              const data = await response.json();
+              if (data.code === 'Ok' && data.routes && data.routes[0]) {
+                const geojsonCoords = data.routes[0].geometry.coordinates;
+                coords = geojsonCoords.map(coord => [coord[1], coord[0]]);
+              }
             }
           } catch (error) {
-            console.warn(`Failed to fetch road route for leg ${step.leg.id}:`, error);
+            console.warn(`Direct OSRM fetch failed for leg ${step.leg.id}, trying proxy...`, error);
+          }
+
+          // Try proxy if direct failed
+          if (!coords) {
+            try {
+              const controller = new AbortController();
+              const timeoutId = setTimeout(() => controller.abort(), 5000);
+              const response = await fetch(proxyUrl, { signal: controller.signal });
+              clearTimeout(timeoutId);
+
+              if (response.ok) {
+                const data = await response.json();
+                if (data.code === 'Ok' && data.routes && data.routes[0]) {
+                  const geojsonCoords = data.routes[0].geometry.coordinates;
+                  coords = geojsonCoords.map(coord => [coord[1], coord[0]]);
+                }
+              }
+            } catch (error) {
+              console.warn(`Proxy OSRM fetch failed for leg ${step.leg.id}:`, error);
+            }
+          }
+
+          if (coords) {
+            roadCoordsCache.set(legKey, coords);
+            saveCoordsCache();
+            return { id: step.leg.id, coords };
           }
           return { id: step.leg.id, coords: fallbackCoords };
         });
@@ -167,13 +230,13 @@ export default function RouteMap({ activeRoute, allNodes }) {
       };
 
       fetchRoadRoute();
-    }, 200); // 200ms debounce
+    }, 350); // ponytail: increased debounce from 200ms to 350ms to throttle map API hits on mobile
 
     return () => {
       active = false;
       clearTimeout(timer);
     };
-  }, [activeRoute, allNodes]);
+  }, [activeRoute, nodesById]);
 
   // Compute map bounds and active markers based on selected route
   const bounds = [];
@@ -182,8 +245,9 @@ export default function RouteMap({ activeRoute, allNodes }) {
 
   if (activeRoute && activeRoute.legs.length > 0) {
     activeRoute.legs.forEach((step, idx) => {
-      const fromNodeObj = allNodes.find(n => n.id === step.fromNode);
-      const toNodeObj = allNodes.find(n => n.id === step.toNode);
+      // ponytail: O(1) node lookup dictionary
+      const fromNodeObj = nodesById[step.fromNode];
+      const toNodeObj = nodesById[step.toNode];
 
       if (fromNodeObj && toNodeObj) {
         const fromCoords = [fromNodeObj.lat, fromNodeObj.lng];
@@ -226,6 +290,15 @@ export default function RouteMap({ activeRoute, allNodes }) {
 
   return (
     <div className="map-wrapper glass-card animate-fade-in" id="saan-punta-map-container">
+      <button 
+        type="button" 
+        className="map-lock-btn"
+        onClick={() => setIsMapLocked(!isMapLocked)}
+        title={isMapLocked ? "Unlock map dragging & zoom" : "Lock map dragging & zoom"}
+      >
+        {isMapLocked ? <Lock size={14} /> : <Unlock size={14} />}
+        <span>{isMapLocked ? "Unlock Map" : "Lock Map"}</span>
+      </button>
       <MapContainer 
         center={mapCenter} 
         zoom={mapZoom} 
@@ -236,6 +309,7 @@ export default function RouteMap({ activeRoute, allNodes }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <MapInteractionController isLocked={isMapLocked} />
 
         {/* Polylines for active route */}
         {polylineSegments.map((segment, idx) => (
@@ -326,3 +400,5 @@ export default function RouteMap({ activeRoute, allNodes }) {
     </div>
   );
 }
+
+export default memo(RouteMap);

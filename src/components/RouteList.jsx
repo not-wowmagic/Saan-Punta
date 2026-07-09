@@ -1,37 +1,18 @@
-import React from 'react';
-import { Bus, Train, Car, Bike, Footprints, Zap, ArrowRight, Info, AlertTriangle, Lightbulb } from 'lucide-react';
+import React, { memo } from 'react';
+import { ArrowRight, Info, AlertTriangle, Lightbulb, Bus } from 'lucide-react';
+import { MODE_ICONS, MODE_LABELS } from '../utils/constants';
 
-const MODE_ICONS = {
-  jeepney: Bus,
-  bus: Bus,
-  train: Train,
-  taxi: Car,
-  moto_taxi: Bike,
-  walk: Footprints,
-  tricycle: Zap
-};
-
-const MODE_LABELS = {
-  jeepney: "Jeepney",
-  bus: "Public Bus",
-  train: "LRT/MRT Train",
-  taxi: "Taxi",
-  moto_taxi: "Motorcycle Taxi",
-  walk: "Walk",
-  tricycle: "Tricycle"
-};
-
-export default function RouteList({
+function RouteList({
   routes,
   totalRoutesCount,
   selectedRouteIndex,
   setSelectedRouteIndex,
-  nodes,
+  nodesById,
   startNode,
   destinationNode
 }) {
   const getNodeName = (id) => {
-    const node = nodes.find(n => n.id === id);
+    const node = nodesById[id];
     return node ? node.name : id;
   };
 
@@ -61,10 +42,10 @@ export default function RouteList({
         <AlertTriangle size={32} className="placeholder-icon text-error" />
         <h3>No Routes Found</h3>
         <p>
-          We couldn't find any direct or transfer connections between these locations in our database.
+          No transit routes found between these locations. Consider taking a direct taxi or motorcycle ride-hailing service.
         </p>
         <p className="text-xs text-muted mt-2">
-          Note: Saan Punta routes are currently curated for the Valenzuela and Caloocan areas.
+          Note: Saan Punta routes are currently curated for Valenzuela, Caloocan, Bulacan, Manila, and Quezon City.
         </p>
       </div>
     );
@@ -208,3 +189,5 @@ export default function RouteList({
     </div>
   );
 }
+
+export default memo(RouteList);

@@ -108,6 +108,144 @@
       "name": "Intramuros (Manila)",
       "lat": 14.5910,
       "lng": 120.9782
+    },
+    {
+      "id": "central_terminal_lrt",
+      "name": "Central Terminal LRT Station",
+      "lat": 14.5908,
+      "lng": 120.9822
+    },
+    {
+      "id": "gil_puyat",
+      "name": "Gil Puyat (Buendia) LRT Station",
+      "lat": 14.5542,
+      "lng": 120.9972
+    },
+    {
+      "id": "taft_edsa",
+      "name": "Taft Avenue / EDSA (Pasay)",
+      "lat": 14.5358,
+      "lng": 120.9995
+    },
+    {
+      "id": "cubao",
+      "name": "Araneta Center-Cubao (Quezon City)",
+      "lat": 14.6227,
+      "lng": 121.0531
+    },
+    {
+      "id": "ortigas",
+      "name": "Ortigas Center / SM Megamall",
+      "lat": 14.5876,
+      "lng": 121.0566
+    },
+    {
+      "id": "ayala",
+      "name": "Ayala Center (Makati CBD)",
+      "lat": 14.5484,
+      "lng": 121.0257
+    },
+    {
+      "id": "santolan_lrt2",
+      "name": "Santolan LRT-2 Station",
+      "lat": 14.6221,
+      "lng": 121.0859
+    },
+    {
+      "id": "antipolo_lrt2",
+      "name": "Antipolo LRT-2 Station",
+      "lat": 14.6247,
+      "lng": 121.1211
+    },
+    {
+      "id": "ust",
+      "name": "University of Santo Tomas (UST)",
+      "lat": 14.6099,
+      "lng": 120.9886
+    },
+    {
+      "id": "up_diliman",
+      "name": "University of the Philippines (UP) Diliman",
+      "lat": 14.6549,
+      "lng": 121.0633
+    },
+    {
+      "id": "dlsu",
+      "name": "De La Salle University (DLSU) Taft",
+      "lat": 14.5586,
+      "lng": 120.9926
+    },
+    {
+      "id": "moa",
+      "name": "SM Mall of Asia (MOA)",
+      "lat": 14.5351,
+      "lng": 120.9822
+    },
+    {
+      "id": "luneta",
+      "name": "Rizal Park (Luneta)",
+      "lat": 14.5825,
+      "lng": 120.9783
+    },
+    {
+      "id": "qc_circle",
+      "name": "Quezon Memorial Circle",
+      "lat": 14.6514,
+      "lng": 121.0492
+    },
+    {
+      "id": "greenhills",
+      "name": "Greenhills Shopping Center",
+      "lat": 14.6017,
+      "lng": 121.0498
+    },
+    {
+      "id": "ph_arena",
+      "name": "Philippine Arena (Bocaue, Bulacan)",
+      "lat": 14.7961,
+      "lng": 120.9544
+    },
+    {
+      "id": "bgc",
+      "name": "Bonifacio High Street (BGC, Taguig)",
+      "lat": 14.5506,
+      "lng": 121.0514
+    },
+    {
+      "id": "ateneo_katipunan",
+      "name": "Ateneo de Manila University (Katipunan)",
+      "lat": 14.6400,
+      "lng": 121.0772
+    },
+    {
+      "id": "feu_manila",
+      "name": "Far Eastern University (FEU Manila)",
+      "lat": 14.6039,
+      "lng": 120.9856
+    },
+    {
+      "id": "mapua_intramuros",
+      "name": "Mapua University (Intramuros)",
+      "lat": 14.5908,
+      "lng": 120.9772
+    },
+    {
+      "id": "parks_wildlife",
+      "name": "Ninoy Aquino Parks and Wildlife Center",
+      "lat": 14.6506,
+      "lng": 121.0439
+    },
+    {
+      "id": "la_mesa_eco",
+      "name": "La Mesa Eco Park (Fairview)",
+      "lat": 14.7119,
+      "lng": 121.0743
+    },
+    {
+      "id": "ccp_complex",
+      "name": "CCP Complex / Star City (Pasay)",
+      "lat": 14.5550,
+      "lng": 120.9833
     }
   ],
   "legs": [
@@ -925,6 +1063,2365 @@
       "distance_km": 2.0,
       "fare_type": "estimate",
       "notes": "LRT-1 train from Doroteo Jose (Recto) to Central Terminal (Intramuros)."
+    },
+    {
+      "id": "leg-82",
+      "from": "roosevelt_lrt",
+      "to": "recto",
+      "mode": "train",
+      "route_name": "LRT-1",
+      "distance_km": 8.4,
+      "fare_type": "estimate",
+      "notes": "LRT-1 train from FPJ Roosevelt to Doroteo Jose (Recto)."
+    },
+    {
+      "id": "leg-83",
+      "from": "balintawak_lrt",
+      "to": "recto",
+      "mode": "train",
+      "route_name": "LRT-1",
+      "distance_km": 6.0,
+      "fare_type": "estimate",
+      "notes": "LRT-1 train from Balintawak to Doroteo Jose (Recto)."
+    },
+    {
+      "id": "leg-84",
+      "from": "divisoria",
+      "to": "binondo",
+      "mode": "tricycle",
+      "route_name": "Divisoria-Binondo Toda",
+      "distance_km": 1.0,
+      "fare_type": "tricycle",
+      "flat_fare": 30.0,
+      "notes": "Local tricycle/e-trike ride around Divisoria and Binondo Chinatown."
+    },
+    {
+      "id": "leg-85",
+      "from": "binondo",
+      "to": "intramuros",
+      "mode": "tricycle",
+      "route_name": "Binondo-Intramuros Toda",
+      "distance_km": 1.2,
+      "fare_type": "tricycle",
+      "flat_fare": 40.0,
+      "notes": "Tricycle ride crossing Jones Bridge to Intramuros."
+    },
+    {
+      "id": "leg-86",
+      "from": "meycauayan",
+      "to": "malanday_term",
+      "mode": "tricycle",
+      "route_name": "Meycauayan-Malanday TODA",
+      "distance_km": 2.2,
+      "fare_type": "tricycle",
+      "flat_fare": 60.0,
+      "notes": "Border-crossing tricycle option from Meycauayan to Malanday Terminal."
+    },
+    {
+      "id": "leg-87",
+      "from": "sm_north",
+      "to": "recto",
+      "mode": "jeepney",
+      "route_name": "Project 6 - Kalaw via Quezon Ave",
+      "distance_km": 9.8,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from SM North/Trinoma area to Recto Avenue."
+    },
+    {
+      "id": "leg-88",
+      "from": "sm_north",
+      "to": "recto",
+      "mode": "jeepney",
+      "route_name": "Project 6 - Kalaw via Quezon Ave",
+      "distance_km": 9.8,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney from SM North to Recto Avenue."
+    },
+    {
+      "id": "leg-89",
+      "from": "recto",
+      "to": "divisoria",
+      "mode": "tricycle",
+      "route_name": "Recto-Divisoria TODA",
+      "distance_km": 1.5,
+      "fare_type": "tricycle",
+      "flat_fare": 40.0,
+      "notes": "Tricycle ride along C.M. Recto Avenue directly to Divisoria."
+    },
+    {
+      "id": "leg-90",
+      "from": "sm_north",
+      "to": "monumento",
+      "mode": "bus",
+      "route_name": "EDSA Carousel",
+      "distance_km": 5.5,
+      "fare_type": "aircon",
+      "notes": "EDSA Carousel bus from SM North (North Avenue) back to Monumento."
+    },
+    {
+      "id": "leg-91",
+      "from": "monumento",
+      "to": "meycauayan",
+      "mode": "jeepney",
+      "route_name": "Monumento - Meycauayan",
+      "distance_km": 10.4,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney heading north to Meycauayan, Bulacan."
+    },
+    {
+      "id": "leg-92",
+      "from": "monumento",
+      "to": "meycauayan",
+      "mode": "jeepney",
+      "route_name": "Monumento - Meycauayan",
+      "distance_km": 10.4,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney heading north to Meycauayan, Bulacan."
+    },
+    {
+      "id": "leg-93",
+      "from": "recto",
+      "to": "central_terminal_lrt",
+      "mode": "train",
+      "route_name": "LRT-1",
+      "distance_km": 1.8,
+      "fare_type": "estimate",
+      "notes": "LRT-1 train from Doroteo Jose to Central Terminal."
+    },
+    {
+      "id": "leg-94",
+      "from": "central_terminal_lrt",
+      "to": "gil_puyat",
+      "mode": "train",
+      "route_name": "LRT-1",
+      "distance_km": 4.1,
+      "fare_type": "estimate",
+      "notes": "LRT-1 train from Central Terminal to Gil Puyat (Buendia)."
+    },
+    {
+      "id": "leg-95",
+      "from": "gil_puyat",
+      "to": "taft_edsa",
+      "mode": "train",
+      "route_name": "LRT-1",
+      "distance_km": 2.1,
+      "fare_type": "estimate",
+      "notes": "LRT-1 train from Gil Puyat to EDSA Station."
+    },
+    {
+      "id": "leg-96",
+      "from": "recto",
+      "to": "cubao",
+      "mode": "train",
+      "route_name": "LRT-2",
+      "distance_km": 7.2,
+      "fare_type": "estimate",
+      "notes": "LRT-2 train from Recto to Araneta Center-Cubao."
+    },
+    {
+      "id": "leg-97",
+      "from": "cubao",
+      "to": "santolan_lrt2",
+      "mode": "train",
+      "route_name": "LRT-2",
+      "distance_km": 3.6,
+      "fare_type": "estimate",
+      "notes": "LRT-2 train from Araneta Center-Cubao to Santolan."
+    },
+    {
+      "id": "leg-98",
+      "from": "santolan_lrt2",
+      "to": "antipolo_lrt2",
+      "mode": "train",
+      "route_name": "LRT-2",
+      "distance_km": 3.8,
+      "fare_type": "estimate",
+      "notes": "LRT-2 train from Santolan to Antipolo."
+    },
+    {
+      "id": "leg-99",
+      "from": "sm_north",
+      "to": "cubao",
+      "mode": "train",
+      "route_name": "MRT-3",
+      "distance_km": 4.2,
+      "fare_type": "estimate",
+      "notes": "MRT-3 train from North Avenue to Araneta Center-Cubao."
+    },
+    {
+      "id": "leg-100",
+      "from": "cubao",
+      "to": "ortigas",
+      "mode": "train",
+      "route_name": "MRT-3",
+      "distance_km": 3.9,
+      "fare_type": "estimate",
+      "notes": "MRT-3 train from Araneta Center-Cubao to Ortigas (SM Megamall)."
+    },
+    {
+      "id": "leg-101",
+      "from": "ortigas",
+      "to": "ayala",
+      "mode": "train",
+      "route_name": "MRT-3",
+      "distance_km": 4.4,
+      "fare_type": "estimate",
+      "notes": "MRT-3 train from Ortigas to Ayala Station (Makati CBD)."
+    },
+    {
+      "id": "leg-102",
+      "from": "ayala",
+      "to": "taft_edsa",
+      "mode": "train",
+      "route_name": "MRT-3",
+      "distance_km": 1.9,
+      "fare_type": "estimate",
+      "notes": "MRT-3 train from Ayala to Taft Avenue (EDSA) terminus."
+    },
+    {
+      "id": "leg-103",
+      "from": "sm_north",
+      "to": "cubao",
+      "mode": "bus",
+      "route_name": "EDSA Carousel",
+      "distance_km": 4.2,
+      "fare_type": "aircon",
+      "notes": "EDSA Carousel express bus from North Ave to Cubao."
+    },
+    {
+      "id": "leg-104",
+      "from": "cubao",
+      "to": "ortigas",
+      "mode": "bus",
+      "route_name": "EDSA Carousel",
+      "distance_km": 3.9,
+      "fare_type": "aircon",
+      "notes": "EDSA Carousel express bus from Cubao to Ortigas."
+    },
+    {
+      "id": "leg-105",
+      "from": "ortigas",
+      "to": "ayala",
+      "mode": "bus",
+      "route_name": "EDSA Carousel",
+      "distance_km": 4.4,
+      "fare_type": "aircon",
+      "notes": "EDSA Carousel express bus from Ortigas to Ayala."
+    },
+    {
+      "id": "leg-106",
+      "from": "ayala",
+      "to": "taft_edsa",
+      "mode": "bus",
+      "route_name": "EDSA Carousel",
+      "distance_km": 1.9,
+      "fare_type": "aircon",
+      "notes": "EDSA Carousel express bus from Ayala to Taft Avenue."
+    },
+    {
+      "id": "leg-107",
+      "from": "intramuros",
+      "to": "central_terminal_lrt",
+      "mode": "jeepney",
+      "route_name": "Baclaran - Divisoria",
+      "distance_km": 0.8,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride from Intramuros gate to Central LRT."
+    },
+    {
+      "id": "leg-108",
+      "from": "recto",
+      "to": "cubao",
+      "mode": "jeepney",
+      "route_name": "Divisoria - Cubao via Aurora",
+      "distance_km": 7.2,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride along Aurora Boulevard to Cubao."
+    },
+    {
+      "id": "leg-109",
+      "from": "recto",
+      "to": "cubao",
+      "mode": "jeepney",
+      "route_name": "Divisoria - Cubao via Aurora",
+      "distance_km": 7.2,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney along Aurora Boulevard to Cubao."
+    },
+    {
+      "id": "leg-110",
+      "from": "cubao",
+      "to": "ortigas",
+      "mode": "jeepney",
+      "route_name": "Cubao - Pasig via EDSA",
+      "distance_km": 3.9,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride from Cubao to Ortigas."
+    },
+    {
+      "id": "leg-111",
+      "from": "intramuros",
+      "to": "central_terminal_lrt",
+      "mode": "tricycle",
+      "route_name": "Intramuros-Central Toda",
+      "distance_km": 1.0,
+      "fare_type": "tricycle",
+      "flat_fare": 30.0,
+      "notes": "Local tricycle shuttle from Intramuros walls to Central Station."
+    },
+    {
+      "id": "leg-112",
+      "from": "santolan_lrt2",
+      "to": "cubao",
+      "mode": "jeepney",
+      "route_name": "Antipolo - Cubao via Aurora",
+      "distance_km": 3.6,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride from Santolan station to Cubao."
+    },
+    {
+      "id": "leg-113",
+      "from": "antipolo_lrt2",
+      "to": "santolan_lrt2",
+      "mode": "jeepney",
+      "route_name": "Antipolo - Cubao via Aurora",
+      "distance_km": 3.8,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney between Antipolo and Santolan stations."
+    },
+    {
+      "id": "leg-114",
+      "from": "recto",
+      "to": "central_terminal_lrt",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 1.8,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-115",
+      "from": "central_terminal_lrt",
+      "to": "gil_puyat",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 4.1,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option via Taft Avenue."
+    },
+    {
+      "id": "leg-116",
+      "from": "gil_puyat",
+      "to": "taft_edsa",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 2.1,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option via Taft Avenue."
+    },
+    {
+      "id": "leg-117",
+      "from": "recto",
+      "to": "cubao",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 7.2,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option via Aurora Boulevard."
+    },
+    {
+      "id": "leg-118",
+      "from": "cubao",
+      "to": "santolan_lrt2",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.6,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option."
+    },
+    {
+      "id": "leg-119",
+      "from": "santolan_lrt2",
+      "to": "antipolo_lrt2",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.8,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option."
+    },
+    {
+      "id": "leg-120",
+      "from": "sm_north",
+      "to": "cubao",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 4.2,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option via EDSA."
+    },
+    {
+      "id": "leg-121",
+      "from": "cubao",
+      "to": "ortigas",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.9,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option via EDSA."
+    },
+    {
+      "id": "leg-122",
+      "from": "ortigas",
+      "to": "ayala",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 4.4,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option via EDSA."
+    },
+    {
+      "id": "leg-123",
+      "from": "ayala",
+      "to": "taft_edsa",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 1.9,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option via EDSA."
+    },
+    {
+      "id": "leg-124",
+      "from": "recto",
+      "to": "central_terminal_lrt",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 1.8,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-125",
+      "from": "central_terminal_lrt",
+      "to": "gil_puyat",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 4.1,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-126",
+      "from": "gil_puyat",
+      "to": "taft_edsa",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 2.1,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-127",
+      "from": "recto",
+      "to": "cubao",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 7.2,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-128",
+      "from": "cubao",
+      "to": "santolan_lrt2",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 3.6,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-129",
+      "from": "santolan_lrt2",
+      "to": "antipolo_lrt2",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 3.8,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-130",
+      "from": "sm_north",
+      "to": "cubao",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 4.2,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-131",
+      "from": "cubao",
+      "to": "ortigas",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 3.9,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-132",
+      "from": "ortigas",
+      "to": "ayala",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 4.4,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-133",
+      "from": "ayala",
+      "to": "taft_edsa",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 1.9,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-134",
+      "from": "ust",
+      "to": "recto",
+      "mode": "jeepney",
+      "route_name": "España - Recto",
+      "distance_km": 1.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from España Boulevard directly to Recto Avenue."
+    },
+    {
+      "id": "leg-135",
+      "from": "ust",
+      "to": "recto",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 1.2,
+      "fare_type": null,
+      "notes": "Walk via Lerma Street and Nicanor Reyes Street to Recto."
+    },
+    {
+      "id": "leg-136",
+      "from": "ust",
+      "to": "sm_north",
+      "mode": "jeepney",
+      "route_name": "Project 6 - Kalaw via España",
+      "distance_km": 7.2,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride along Quezon Avenue to SM North."
+    },
+    {
+      "id": "leg-137",
+      "from": "ust",
+      "to": "sm_north",
+      "mode": "bus",
+      "route_name": "Fairview - PITX via Quezon Ave",
+      "distance_km": 7.2,
+      "fare_type": "aircon",
+      "notes": "Public bus along Quezon Avenue from España to SM North."
+    },
+    {
+      "id": "leg-138",
+      "from": "up_diliman",
+      "to": "sm_north",
+      "mode": "jeepney",
+      "route_name": "UP Diliman - SM North",
+      "distance_km": 4.8,
+      "fare_type": "traditional",
+      "notes": "Direct jeepney connecting UP Diliman campus to SM North/Trinoma."
+    },
+    {
+      "id": "leg-139",
+      "from": "up_diliman",
+      "to": "cubao",
+      "mode": "jeepney",
+      "route_name": "UP Diliman - Cubao",
+      "distance_km": 5.5,
+      "fare_type": "traditional",
+      "notes": "Direct jeepney connecting UP Diliman campus to Araneta City Cubao."
+    },
+    {
+      "id": "leg-140",
+      "from": "dlsu",
+      "to": "gil_puyat",
+      "mode": "train",
+      "route_name": "LRT-1",
+      "distance_km": 0.6,
+      "fare_type": "estimate",
+      "notes": "LRT-1 train from Vito Cruz to Gil Puyat (Buendia)."
+    },
+    {
+      "id": "leg-141",
+      "from": "dlsu",
+      "to": "gil_puyat",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 0.6,
+      "fare_type": null,
+      "notes": "Walk directly south along Taft Avenue."
+    },
+    {
+      "id": "leg-142",
+      "from": "dlsu",
+      "to": "gil_puyat",
+      "mode": "jeepney",
+      "route_name": "Baclaran - Divisoria via Taft",
+      "distance_km": 0.6,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride down Taft Avenue."
+    },
+    {
+      "id": "leg-143",
+      "from": "dlsu",
+      "to": "central_terminal_lrt",
+      "mode": "train",
+      "route_name": "LRT-1",
+      "distance_km": 3.5,
+      "fare_type": "estimate",
+      "notes": "LRT-1 train from Vito Cruz to Central Terminal."
+    },
+    {
+      "id": "leg-144",
+      "from": "dlsu",
+      "to": "central_terminal_lrt",
+      "mode": "jeepney",
+      "route_name": "Baclaran - Monumento via Taft",
+      "distance_km": 3.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride north along Taft Avenue."
+    },
+    {
+      "id": "leg-145",
+      "from": "moa",
+      "to": "taft_edsa",
+      "mode": "jeepney",
+      "route_name": "MOA - Taft EDSA",
+      "distance_km": 2.1,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney shuttling between SM Mall of Asia and EDSA-Taft."
+    },
+    {
+      "id": "leg-146",
+      "from": "moa",
+      "to": "taft_edsa",
+      "mode": "jeepney",
+      "route_name": "MOA - Taft EDSA",
+      "distance_km": 2.1,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned e-jeep shuttle between SM Mall of Asia and EDSA-Taft."
+    },
+    {
+      "id": "leg-147",
+      "from": "moa",
+      "to": "taft_edsa",
+      "mode": "bus",
+      "route_name": "EDSA Carousel",
+      "distance_km": 2.1,
+      "fare_type": "aircon",
+      "notes": "EDSA Carousel loop bus between SM Mall of Asia and Taft Avenue."
+    },
+    {
+      "id": "leg-148",
+      "from": "luneta",
+      "to": "intramuros",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 0.6,
+      "fare_type": null,
+      "notes": "Short walk north into Intramuros walls."
+    },
+    {
+      "id": "leg-149",
+      "from": "luneta",
+      "to": "intramuros",
+      "mode": "jeepney",
+      "route_name": "Malanday - Baclaran",
+      "distance_km": 0.6,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney heading north to Intramuros."
+    },
+    {
+      "id": "leg-150",
+      "from": "luneta",
+      "to": "central_terminal_lrt",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 0.8,
+      "fare_type": null,
+      "notes": "Walk via Padre Burgos Ave to Central LRT Station."
+    },
+    {
+      "id": "leg-151",
+      "from": "luneta",
+      "to": "central_terminal_lrt",
+      "mode": "jeepney",
+      "route_name": "Malanday - Baclaran",
+      "distance_km": 0.8,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride along Padre Burgos Avenue."
+    },
+    {
+      "id": "leg-152",
+      "from": "luneta",
+      "to": "central_terminal_lrt",
+      "mode": "tricycle",
+      "route_name": "Luneta-Central Toda",
+      "distance_km": 0.9,
+      "fare_type": "tricycle",
+      "flat_fare": 30.0,
+      "notes": "Local tricycle ride from Rizal Park to Central LRT Station."
+    },
+    {
+      "id": "leg-153",
+      "from": "qc_circle",
+      "to": "sm_north",
+      "mode": "jeepney",
+      "route_name": "Lagro - Anonas via Circle",
+      "distance_km": 2.2,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from Quezon Memorial Circle to SM North."
+    },
+    {
+      "id": "leg-154",
+      "from": "qc_circle",
+      "to": "sm_north",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 2.0,
+      "fare_type": null,
+      "notes": "Walk along North Avenue."
+    },
+    {
+      "id": "leg-155",
+      "from": "qc_circle",
+      "to": "cubao",
+      "mode": "jeepney",
+      "route_name": "Fairview - Cubao via East Ave",
+      "distance_km": 4.0,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride from Quezon Circle to Cubao."
+    },
+    {
+      "id": "leg-156",
+      "from": "greenhills",
+      "to": "ortigas",
+      "mode": "jeepney",
+      "route_name": "Greenhills - Megamall",
+      "distance_km": 2.8,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney connecting Greenhills and Ortigas Megamall."
+    },
+    {
+      "id": "leg-157",
+      "from": "greenhills",
+      "to": "ortigas",
+      "mode": "tricycle",
+      "route_name": "Greenhills-Ortigas Toda",
+      "distance_km": 2.8,
+      "fare_type": "tricycle",
+      "flat_fare": 50.0,
+      "notes": "Negotiated tricycle ride between Greenhills and Megamall."
+    },
+    {
+      "id": "leg-158",
+      "from": "greenhills",
+      "to": "cubao",
+      "mode": "jeepney",
+      "route_name": "Crame - Cubao",
+      "distance_km": 3.2,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride from Greenhills area to Cubao."
+    },
+    {
+      "id": "leg-159",
+      "from": "ust",
+      "to": "recto",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 1.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-160",
+      "from": "ust",
+      "to": "sm_north",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 7.2,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option via Quezon Ave."
+    },
+    {
+      "id": "leg-161",
+      "from": "up_diliman",
+      "to": "sm_north",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 4.8,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-162",
+      "from": "up_diliman",
+      "to": "cubao",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 5.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-163",
+      "from": "dlsu",
+      "to": "gil_puyat",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 0.6,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-164",
+      "from": "dlsu",
+      "to": "central_terminal_lrt",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-165",
+      "from": "moa",
+      "to": "taft_edsa",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 2.1,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-166",
+      "from": "luneta",
+      "to": "intramuros",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 0.6,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-167",
+      "from": "luneta",
+      "to": "central_terminal_lrt",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 0.8,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-168",
+      "from": "qc_circle",
+      "to": "sm_north",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 2.2,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-169",
+      "from": "qc_circle",
+      "to": "cubao",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 4.0,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-170",
+      "from": "greenhills",
+      "to": "ortigas",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 2.8,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-171",
+      "from": "greenhills",
+      "to": "cubao",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.2,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-172",
+      "from": "ust",
+      "to": "recto",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 1.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-173",
+      "from": "ust",
+      "to": "sm_north",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 7.2,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-174",
+      "from": "up_diliman",
+      "to": "sm_north",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 4.8,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-175",
+      "from": "up_diliman",
+      "to": "cubao",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 5.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-176",
+      "from": "dlsu",
+      "to": "gil_puyat",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 0.6,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-177",
+      "from": "dlsu",
+      "to": "central_terminal_lrt",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 3.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-178",
+      "from": "moa",
+      "to": "taft_edsa",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 2.1,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-179",
+      "from": "luneta",
+      "to": "intramuros",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 0.6,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-180",
+      "from": "luneta",
+      "to": "central_terminal_lrt",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 0.8,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-181",
+      "from": "qc_circle",
+      "to": "sm_north",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 2.2,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-182",
+      "from": "qc_circle",
+      "to": "cubao",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 4.0,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-183",
+      "from": "greenhills",
+      "to": "ortigas",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 2.8,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-184",
+      "from": "greenhills",
+      "to": "cubao",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 3.2,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-185",
+      "from": "ph_arena",
+      "to": "meycauayan",
+      "mode": "jeepney",
+      "route_name": "Bocaue - Meycauayan",
+      "distance_km": 8.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride along McArthur Highway."
+    },
+    {
+      "id": "leg-186",
+      "from": "ph_arena",
+      "to": "vgc_term",
+      "mode": "bus",
+      "route_name": "Bocaue P2P - NLEX",
+      "distance_km": 11.5,
+      "fare_type": "aircon",
+      "notes": "NLEX Express P2P shuttle directly to Valenzuela Gateway Complex."
+    },
+    {
+      "id": "leg-187",
+      "from": "bgc",
+      "to": "ayala",
+      "mode": "bus",
+      "route_name": "BGC Bus - West Route",
+      "distance_km": 3.2,
+      "fare_type": "aircon",
+      "notes": "Dedicated BGC Bus shuttling directly to MRT-3 Ayala Station."
+    },
+    {
+      "id": "leg-188",
+      "from": "bgc",
+      "to": "ayala",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 3.0,
+      "fare_type": null,
+      "notes": "Walk via McKinley Road or residential walkways to MRT Ayala."
+    },
+    {
+      "id": "leg-189",
+      "from": "ateneo_katipunan",
+      "to": "cubao",
+      "mode": "train",
+      "route_name": "LRT-2",
+      "distance_km": 3.5,
+      "fare_type": "estimate",
+      "notes": "LRT-2 train from Katipunan Station directly to Cubao."
+    },
+    {
+      "id": "leg-190",
+      "from": "ateneo_katipunan",
+      "to": "cubao",
+      "mode": "jeepney",
+      "route_name": "Katipunan - Cubao via Aurora",
+      "distance_km": 3.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride along Aurora Boulevard."
+    },
+    {
+      "id": "leg-191",
+      "from": "feu_manila",
+      "to": "recto",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 0.6,
+      "fare_type": null,
+      "notes": "Walk directly to Doroteo Jose / Recto intersection."
+    },
+    {
+      "id": "leg-192",
+      "from": "feu_manila",
+      "to": "recto",
+      "mode": "jeepney",
+      "route_name": "Morayta - Recto",
+      "distance_km": 0.6,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney shuttle along Recto Avenue."
+    },
+    {
+      "id": "leg-193",
+      "from": "feu_manila",
+      "to": "ust",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 0.7,
+      "fare_type": null,
+      "notes": "Walk via Nicanor Reyes Street to UST España Gate."
+    },
+    {
+      "id": "leg-194",
+      "from": "feu_manila",
+      "to": "ust",
+      "mode": "jeepney",
+      "route_name": "Gastambide - España",
+      "distance_km": 0.7,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney shuttle connecting FEU to UST."
+    },
+    {
+      "id": "leg-195",
+      "from": "mapua_intramuros",
+      "to": "intramuros",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 0.4,
+      "fare_type": null,
+      "notes": "Walk directly inside Intramuros walls."
+    },
+    {
+      "id": "leg-196",
+      "from": "mapua_intramuros",
+      "to": "central_terminal_lrt",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 0.8,
+      "fare_type": null,
+      "notes": "Walk via Muralla Street directly to LRT Central."
+    },
+    {
+      "id": "leg-197",
+      "from": "mapua_intramuros",
+      "to": "central_terminal_lrt",
+      "mode": "tricycle",
+      "route_name": "Mapua-Central Toda",
+      "distance_km": 0.8,
+      "fare_type": "tricycle",
+      "flat_fare": 30.0,
+      "notes": "Local tricycle ride from Mapua campus directly to Central Station."
+    },
+    {
+      "id": "leg-198",
+      "from": "parks_wildlife",
+      "to": "qc_circle",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 0.5,
+      "fare_type": null,
+      "notes": "Walk via Elliptical Road directly to Quezon Circle."
+    },
+    {
+      "id": "leg-199",
+      "from": "parks_wildlife",
+      "to": "sm_north",
+      "mode": "jeepney",
+      "route_name": "Lagro - Anonas via North Ave",
+      "distance_km": 1.8,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney along North Avenue to SM North."
+    },
+    {
+      "id": "leg-200",
+      "from": "la_mesa_eco",
+      "to": "sm_fairview",
+      "mode": "jeepney",
+      "route_name": "Fairview - La Mesa",
+      "distance_km": 4.2,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from La Mesa gate to SM Fairview."
+    },
+    {
+      "id": "leg-201",
+      "from": "la_mesa_eco",
+      "to": "sm_fairview",
+      "mode": "tricycle",
+      "route_name": "La Mesa Toda",
+      "distance_km": 4.2,
+      "fare_type": "tricycle",
+      "flat_fare": 50.0,
+      "notes": "Local tricycle ride from La Mesa Eco Park to SM Fairview."
+    },
+    {
+      "id": "leg-202",
+      "from": "ccp_complex",
+      "to": "gil_puyat",
+      "mode": "jeepney",
+      "route_name": "CCP - Buendia Shuttle",
+      "distance_km": 1.8,
+      "fare_type": "traditional",
+      "notes": "Shuttle jeepney ride along Buendia (Gil Puyat) Avenue."
+    },
+    {
+      "id": "leg-203",
+      "from": "ccp_complex",
+      "to": "gil_puyat",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 1.8,
+      "fare_type": null,
+      "notes": "Walk directly east along Gil Puyat Boulevard."
+    },
+    {
+      "id": "leg-204",
+      "from": "ccp_complex",
+      "to": "dlsu",
+      "mode": "jeepney",
+      "route_name": "Vito Cruz - CCP Shuttle",
+      "distance_km": 1.5,
+      "fare_type": "traditional",
+      "notes": "Local shuttle jeepney traversing Vito Cruz to DLSU Taft."
+    },
+    {
+      "id": "leg-205",
+      "from": "ccp_complex",
+      "to": "dlsu",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 1.4,
+      "fare_type": null,
+      "notes": "Walk along Vito Cruz Street (Pablo Ocampo Sr. St) directly to Taft."
+    },
+    {
+      "id": "leg-206",
+      "from": "ph_arena",
+      "to": "meycauayan",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 8.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-207",
+      "from": "ph_arena",
+      "to": "vgc_term",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 11.5,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option via NLEX."
+    },
+    {
+      "id": "leg-208",
+      "from": "bgc",
+      "to": "ayala",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.2,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option."
+    },
+    {
+      "id": "leg-209",
+      "from": "ateneo_katipunan",
+      "to": "cubao",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.5,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option."
+    },
+    {
+      "id": "leg-210",
+      "from": "feu_manila",
+      "to": "recto",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 0.6,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-211",
+      "from": "feu_manila",
+      "to": "ust",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 0.7,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-212",
+      "from": "mapua_intramuros",
+      "to": "central_terminal_lrt",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 0.8,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-213",
+      "from": "parks_wildlife",
+      "to": "sm_north",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 1.8,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option."
+    },
+    {
+      "id": "leg-214",
+      "from": "la_mesa_eco",
+      "to": "sm_fairview",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 4.2,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option."
+    },
+    {
+      "id": "leg-215",
+      "from": "ccp_complex",
+      "to": "gil_puyat",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 1.8,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option."
+    },
+    {
+      "id": "leg-216",
+      "from": "ccp_complex",
+      "to": "dlsu",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 1.5,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option."
+    },
+    {
+      "id": "leg-217",
+      "from": "ph_arena",
+      "to": "meycauayan",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 8.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-218",
+      "from": "ph_arena",
+      "to": "vgc_term",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 11.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-219",
+      "from": "bgc",
+      "to": "ayala",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 3.2,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-220",
+      "from": "ateneo_katipunan",
+      "to": "cubao",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 3.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-221",
+      "from": "feu_manila",
+      "to": "recto",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 0.6,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-222",
+      "from": "feu_manila",
+      "to": "ust",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 0.7,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-223",
+      "from": "mapua_intramuros",
+      "to": "central_terminal_lrt",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 0.8,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-224",
+      "from": "parks_wildlife",
+      "to": "sm_north",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 1.8,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-225",
+      "from": "la_mesa_eco",
+      "to": "sm_fairview",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 4.2,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-226",
+      "from": "ccp_complex",
+      "to": "gil_puyat",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 1.8,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-227",
+      "from": "ccp_complex",
+      "to": "dlsu",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 1.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-228",
+      "from": "sm_fairview",
+      "to": "sm_north",
+      "mode": "jeepney",
+      "route_name": "Fairview - SM North via Commonwealth",
+      "distance_km": 14.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride traversing Commonwealth Avenue."
+    },
+    {
+      "id": "leg-229",
+      "from": "sm_fairview",
+      "to": "sm_north",
+      "mode": "jeepney",
+      "route_name": "Fairview - SM North via Commonwealth",
+      "distance_km": 14.5,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney traversing Commonwealth Avenue."
+    },
+    {
+      "id": "leg-230",
+      "from": "sm_fairview",
+      "to": "sm_north",
+      "mode": "bus",
+      "route_name": "Fairview - PITX via Commonwealth",
+      "distance_km": 14.5,
+      "fare_type": "aircon",
+      "notes": "City bus ride traversing Commonwealth Avenue directly to SM North."
+    },
+    {
+      "id": "leg-231",
+      "from": "sm_fairview",
+      "to": "qc_circle",
+      "mode": "jeepney",
+      "route_name": "Fairview - Philcoa",
+      "distance_km": 12.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from SM Fairview directly to Quezon Circle (Philcoa)."
+    },
+    {
+      "id": "leg-232",
+      "from": "sm_fairview",
+      "to": "qc_circle",
+      "mode": "jeepney",
+      "route_name": "Fairview - Philcoa",
+      "distance_km": 12.5,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney from SM Fairview directly to Quezon Circle."
+    },
+    {
+      "id": "leg-233",
+      "from": "sm_fairview",
+      "to": "qc_circle",
+      "mode": "bus",
+      "route_name": "Fairview - PITX",
+      "distance_km": 12.5,
+      "fare_type": "aircon",
+      "notes": "City bus along Commonwealth Avenue from SM Fairview to Quezon Circle."
+    },
+    {
+      "id": "leg-234",
+      "from": "sm_fairview",
+      "to": "cubao",
+      "mode": "jeepney",
+      "route_name": "Fairview - Cubao",
+      "distance_km": 17.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride via Commonwealth and East Avenue to Cubao."
+    },
+    {
+      "id": "leg-235",
+      "from": "sm_fairview",
+      "to": "cubao",
+      "mode": "jeepney",
+      "route_name": "Fairview - Cubao",
+      "distance_km": 17.5,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney via Commonwealth to Araneta City Cubao."
+    },
+    {
+      "id": "leg-236",
+      "from": "sm_fairview",
+      "to": "cubao",
+      "mode": "bus",
+      "route_name": "Fairview - Cubao",
+      "distance_km": 17.5,
+      "fare_type": "aircon",
+      "notes": "City bus ride directly to Araneta City Cubao."
+    },
+    {
+      "id": "leg-237",
+      "from": "novaliches_term",
+      "to": "sm_north",
+      "mode": "jeepney",
+      "route_name": "Novaliches - SM North via Mindanao",
+      "distance_km": 12.0,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride along Quirino Highway and Mindanao Avenue."
+    },
+    {
+      "id": "leg-238",
+      "from": "novaliches_term",
+      "to": "sm_north",
+      "mode": "jeepney",
+      "route_name": "Novaliches - SM North via Mindanao",
+      "distance_km": 12.0,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney along Quirino Highway and Mindanao Avenue."
+    },
+    {
+      "id": "leg-239",
+      "from": "novaliches_term",
+      "to": "qc_circle",
+      "mode": "jeepney",
+      "route_name": "Novaliches - Philcoa via Quirino",
+      "distance_km": 11.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney from Novaliches Terminal to Quezon Circle."
+    },
+    {
+      "id": "leg-240",
+      "from": "novaliches_term",
+      "to": "cubao",
+      "mode": "jeepney",
+      "route_name": "Novaliches - Cubao",
+      "distance_km": 15.0,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride traversing Quirino Highway directly to Cubao."
+    },
+    {
+      "id": "leg-241",
+      "from": "ust",
+      "to": "qc_circle",
+      "mode": "jeepney",
+      "route_name": "España - Fairview via Commonwealth",
+      "distance_km": 11.0,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney along España Boulevard and Quezon Avenue to Circle."
+    },
+    {
+      "id": "leg-242",
+      "from": "ust",
+      "to": "qc_circle",
+      "mode": "bus",
+      "route_name": "PITX - Fairview via España",
+      "distance_km": 11.0,
+      "fare_type": "aircon",
+      "notes": "Public bus along España Boulevard and Quezon Avenue to Circle."
+    },
+    {
+      "id": "leg-243",
+      "from": "gil_puyat",
+      "to": "ayala",
+      "mode": "jeepney",
+      "route_name": "Buendia - Ayala LRT Shuttle",
+      "distance_km": 3.0,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney traversing Gil Puyat (Buendia) Avenue directly to Ayala Makati."
+    },
+    {
+      "id": "leg-244",
+      "from": "gil_puyat",
+      "to": "ayala",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 3.0,
+      "fare_type": null,
+      "notes": "Walk east along Gil Puyat (Buendia) Avenue."
+    },
+    {
+      "id": "leg-245",
+      "from": "gil_puyat",
+      "to": "moa",
+      "mode": "jeepney",
+      "route_name": "Buendia - MOA LRT Shuttle",
+      "distance_km": 3.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney traversing Buendia Avenue directly to SM Mall of Asia."
+    },
+    {
+      "id": "leg-246",
+      "from": "gil_puyat",
+      "to": "moa",
+      "mode": "bus",
+      "route_name": "Buendia - MOA Loop",
+      "distance_km": 3.5,
+      "fare_type": "aircon",
+      "notes": "Public bus along Buendia Avenue to SM Mall of Asia."
+    },
+    {
+      "id": "leg-247",
+      "from": "gil_puyat",
+      "to": "moa",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 3.5,
+      "fare_type": null,
+      "notes": "Walk via Jose Diokno Boulevard to SM Mall of Asia."
+    },
+    {
+      "id": "leg-248",
+      "from": "sm_fairview",
+      "to": "sm_north",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 14.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-249",
+      "from": "sm_fairview",
+      "to": "qc_circle",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 12.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-250",
+      "from": "sm_fairview",
+      "to": "cubao",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 17.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-251",
+      "from": "novaliches_term",
+      "to": "sm_north",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 12.0,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-252",
+      "from": "novaliches_term",
+      "to": "qc_circle",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 11.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-253",
+      "from": "novaliches_term",
+      "to": "cubao",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 15.0,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-254",
+      "from": "ust",
+      "to": "qc_circle",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 11.0,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-255",
+      "from": "gil_puyat",
+      "to": "ayala",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.0,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-256",
+      "from": "gil_puyat",
+      "to": "moa",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-257",
+      "from": "sm_fairview",
+      "to": "sm_north",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 14.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-258",
+      "from": "sm_fairview",
+      "to": "qc_circle",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 12.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-259",
+      "from": "sm_fairview",
+      "to": "cubao",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 17.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-260",
+      "from": "novaliches_term",
+      "to": "sm_north",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 12.0,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-261",
+      "from": "novaliches_term",
+      "to": "qc_circle",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 11.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-262",
+      "from": "novaliches_term",
+      "to": "cubao",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 15.0,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-263",
+      "from": "ust",
+      "to": "qc_circle",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 11.0,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-264",
+      "from": "gil_puyat",
+      "to": "ayala",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 3.0,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-265",
+      "from": "gil_puyat",
+      "to": "moa",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 3.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-266",
+      "from": "meycauayan",
+      "to": "moa",
+      "mode": "bus",
+      "route_name": "Balagtas - PITX via NLEX",
+      "distance_km": 28.5,
+      "fare_type": "aircon",
+      "notes": "Direct Bulacan express bus to SM Mall of Asia / PITX via NLEX."
+    },
+    {
+      "id": "leg-267",
+      "from": "meycauayan",
+      "to": "monumento",
+      "mode": "bus",
+      "route_name": "Balagtas - Monumento",
+      "distance_km": 10.4,
+      "fare_type": "aircon",
+      "notes": "Express bus traversing MacArthur Highway directly to Monumento."
+    },
+    {
+      "id": "leg-268",
+      "from": "meycauayan",
+      "to": "central_terminal_lrt",
+      "mode": "bus",
+      "route_name": "Balagtas - PITX via Avenida",
+      "distance_km": 15.0,
+      "fare_type": "aircon",
+      "notes": "Bulacan bus traversing Avenida and Roxas Boulevard."
+    },
+    {
+      "id": "leg-269",
+      "from": "meycauayan",
+      "to": "gil_puyat",
+      "mode": "bus",
+      "route_name": "Balagtas - PITX via Taft",
+      "distance_km": 22.0,
+      "fare_type": "aircon",
+      "notes": "Direct NLEX bus heading down to Taft Avenue (Gil Puyat LRT)."
+    },
+    {
+      "id": "leg-270",
+      "from": "taft_edsa",
+      "to": "moa",
+      "mode": "bus",
+      "route_name": "EDSA Carousel",
+      "distance_km": 2.1,
+      "fare_type": "aircon",
+      "notes": "EDSA Carousel shuttle bus directly to SM Mall of Asia Globe Rotunda."
+    },
+    {
+      "id": "leg-271",
+      "from": "taft_edsa",
+      "to": "moa",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 2.1,
+      "fare_type": null,
+      "notes": "Walk west along EDSA Extension to SM Mall of Asia."
+    },
+    {
+      "id": "leg-272",
+      "from": "taft_edsa",
+      "to": "moa",
+      "mode": "jeepney",
+      "route_name": "Pasay Rotonda - MOA Shuttle",
+      "distance_km": 2.1,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride down EDSA Extension."
+    },
+    {
+      "id": "leg-273",
+      "from": "taft_edsa",
+      "to": "moa",
+      "mode": "jeepney",
+      "route_name": "Pasay Rotonda - MOA Shuttle",
+      "distance_km": 2.1,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned e-jeep shuttle to SM Mall of Asia."
+    },
+    {
+      "id": "leg-274",
+      "from": "meycauayan",
+      "to": "moa",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 28.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-275",
+      "from": "meycauayan",
+      "to": "monumento",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 10.4,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-276",
+      "from": "meycauayan",
+      "to": "central_terminal_lrt",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 15.0,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-277",
+      "from": "meycauayan",
+      "to": "gil_puyat",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 22.0,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-278",
+      "from": "taft_edsa",
+      "to": "moa",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 2.1,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-279",
+      "from": "meycauayan",
+      "to": "moa",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 28.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-280",
+      "from": "meycauayan",
+      "to": "monumento",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 10.4,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-281",
+      "from": "meycauayan",
+      "to": "central_terminal_lrt",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 15.0,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-282",
+      "from": "meycauayan",
+      "to": "gil_puyat",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 22.0,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-283",
+      "from": "taft_edsa",
+      "to": "moa",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 2.1,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-284",
+      "from": "up_diliman",
+      "to": "ateneo_katipunan",
+      "mode": "jeepney",
+      "route_name": "UP - Katipunan",
+      "distance_km": 1.8,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney route from UP Diliman campus to Katipunan Avenue."
+    },
+    {
+      "id": "leg-285",
+      "from": "up_diliman",
+      "to": "ateneo_katipunan",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 1.8,
+      "fare_type": null,
+      "notes": "Walk along Katipunan Avenue / UP border."
+    },
+    {
+      "id": "leg-286",
+      "from": "ust",
+      "to": "dlsu",
+      "mode": "jeepney",
+      "route_name": "España - Taft via Lawton",
+      "distance_km": 6.2,
+      "fare_type": "traditional",
+      "notes": "Direct traditional jeepney traversing the España-Taft Avenue corridor."
+    },
+    {
+      "id": "leg-287",
+      "from": "ust",
+      "to": "dlsu",
+      "mode": "jeepney",
+      "route_name": "España - Taft via Lawton",
+      "distance_km": 6.2,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney traversing the España-Taft Avenue corridor."
+    },
+    {
+      "id": "leg-288",
+      "from": "ust",
+      "to": "dlsu",
+      "mode": "bus",
+      "route_name": "Fairview - Baclaran via Taft",
+      "distance_km": 6.2,
+      "fare_type": "aircon",
+      "notes": "Public bus along España Boulevard and Taft Avenue directly to Vito Cruz DLSU."
+    },
+    {
+      "id": "leg-289",
+      "from": "sm_fairview",
+      "to": "up_diliman",
+      "mode": "jeepney",
+      "route_name": "Fairview - Philcoa",
+      "distance_km": 11.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney to Philcoa, with transfer or walk into UP campus."
+    },
+    {
+      "id": "leg-290",
+      "from": "sm_fairview",
+      "to": "up_diliman",
+      "mode": "jeepney",
+      "route_name": "Fairview - Philcoa",
+      "distance_km": 11.5,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney to Philcoa."
+    },
+    {
+      "id": "leg-291",
+      "from": "sm_fairview",
+      "to": "up_diliman",
+      "mode": "bus",
+      "route_name": "Fairview - PITX via Commonwealth",
+      "distance_km": 11.5,
+      "fare_type": "aircon",
+      "notes": "Public bus dropping off at Philcoa / UP Gate."
+    },
+    {
+      "id": "leg-292",
+      "from": "bgc",
+      "to": "ortigas",
+      "mode": "bus",
+      "route_name": "Market Market - Pasig/Ortigas UV",
+      "distance_km": 4.5,
+      "fare_type": "aircon",
+      "notes": "UV Express shuttle from Market! Market! terminal to Ortigas Center."
+    },
+    {
+      "id": "leg-293",
+      "from": "bgc",
+      "to": "taft_edsa",
+      "mode": "jeepney",
+      "route_name": "Market Market - Pasay Rotonda",
+      "distance_km": 6.5,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney route connecting BGC to EDSA Taft Avenue interchange."
+    },
+    {
+      "id": "leg-294",
+      "from": "moa",
+      "to": "dlsu",
+      "mode": "jeepney",
+      "route_name": "MOA - Vito Cruz via Harrison",
+      "distance_km": 3.2,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney ride connecting SM Mall of Asia to Vito Cruz DLSU Taft."
+    },
+    {
+      "id": "leg-295",
+      "from": "moa",
+      "to": "dlsu",
+      "mode": "jeepney",
+      "route_name": "MOA - Vito Cruz via Harrison",
+      "distance_km": 3.2,
+      "fare_type": "modern",
+      "notes": "Modern air-conditioned jeepney from MOA directly to DLSU Taft."
+    },
+    {
+      "id": "leg-296",
+      "from": "moa",
+      "to": "dlsu",
+      "mode": "walk",
+      "route_name": null,
+      "distance_km": 3.0,
+      "fare_type": null,
+      "notes": "Walk along Harrison and Vito Cruz streets directly to DLSU Taft."
+    },
+    {
+      "id": "leg-297",
+      "from": "ateneo_katipunan",
+      "to": "santolan_lrt2",
+      "mode": "train",
+      "route_name": "LRT-2",
+      "distance_km": 3.0,
+      "fare_type": "estimate",
+      "notes": "LRT-2 train from Katipunan Station to Santolan."
+    },
+    {
+      "id": "leg-298",
+      "from": "ateneo_katipunan",
+      "to": "antipolo_lrt2",
+      "mode": "train",
+      "route_name": "LRT-2",
+      "distance_km": 7.0,
+      "fare_type": "estimate",
+      "notes": "LRT-2 train extension from Katipunan Station directly to Antipolo."
+    },
+    {
+      "id": "leg-299",
+      "from": "ateneo_katipunan",
+      "to": "santolan_lrt2",
+      "mode": "jeepney",
+      "route_name": "Marcos Highway Loop",
+      "distance_km": 3.0,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney along Marcos Highway."
+    },
+    {
+      "id": "leg-300",
+      "from": "ateneo_katipunan",
+      "to": "antipolo_lrt2",
+      "mode": "jeepney",
+      "route_name": "Cogeo - Cubao via Marcos Highway",
+      "distance_km": 7.0,
+      "fare_type": "traditional",
+      "notes": "Traditional jeepney traversing Marcos Highway to Antipolo."
+    },
+    {
+      "id": "leg-301",
+      "from": "up_diliman",
+      "to": "ateneo_katipunan",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 1.8,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-302",
+      "from": "ust",
+      "to": "dlsu",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 6.2,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-303",
+      "from": "sm_fairview",
+      "to": "up_diliman",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 11.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-304",
+      "from": "bgc",
+      "to": "ortigas",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 4.5,
+      "fare_type": "estimate",
+      "notes": "Motorcycle taxi option via Santa Monica-Lawton Bridge."
+    },
+    {
+      "id": "leg-305",
+      "from": "bgc",
+      "to": "taft_edsa",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 6.5,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-306",
+      "from": "moa",
+      "to": "dlsu",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.2,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-307",
+      "from": "ateneo_katipunan",
+      "to": "santolan_lrt2",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 3.0,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-308",
+      "from": "ateneo_katipunan",
+      "to": "antipolo_lrt2",
+      "mode": "moto_taxi",
+      "route_name": null,
+      "distance_km": 7.0,
+      "fare_type": "estimate",
+      "notes": "Quick motorcycle taxi option."
+    },
+    {
+      "id": "leg-309",
+      "from": "up_diliman",
+      "to": "ateneo_katipunan",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 1.8,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-310",
+      "from": "ust",
+      "to": "dlsu",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 6.2,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-311",
+      "from": "sm_fairview",
+      "to": "up_diliman",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 11.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-312",
+      "from": "bgc",
+      "to": "ortigas",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 4.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option via Santa Monica-Lawton Bridge."
+    },
+    {
+      "id": "leg-313",
+      "from": "bgc",
+      "to": "taft_edsa",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 6.5,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-314",
+      "from": "moa",
+      "to": "dlsu",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 3.2,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-315",
+      "from": "ateneo_katipunan",
+      "to": "santolan_lrt2",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 3.0,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
+    },
+    {
+      "id": "leg-316",
+      "from": "ateneo_katipunan",
+      "to": "antipolo_lrt2",
+      "mode": "taxi",
+      "route_name": null,
+      "distance_km": 7.0,
+      "fare_type": "taxi",
+      "notes": "Direct taxi option."
     }
   ]
 }

@@ -1,8 +1,8 @@
 # Saan Punta — Commute Route Finder & Fare Calculator
 
-**Saan Punta** is a static React (Vite) point-to-point public transport commute route finder tailored for destinations around the **Pamantasan ng Lungsod ng Valenzuela (PLV)** and surrounding Metro Manila areas. 
+**Saan Punta** is a highly optimized React + Vite point-to-point public transport commute route finder and fare calculator covering **41 major nodes** and **316 legs** across Metro Manila (Valenzuela, Caloocan, Manila, Quezon City, San Juan, Mandaluyong, Makati, Pasig, Marikina, Taguig/BGC, Pasay) and surrounding provinces (Bulacan and Rizal).
 
-It calculates travel paths across multiple transport modes (jeepneys, tricycles, trains, taxis, motorcycle taxis, walking) using a graph traversal algorithm, rendering the route on an interactive OpenStreetMap (Leaflet) map accompanied by detailed, step-by-step fare cards.
+It calculates travel paths across multiple transport modes (jeepneys, modern e-jeeps, buses, trains, tricycles, taxis, motorcycle taxis, walking) using an optimized O(V + E) graph traversal algorithm, rendering the route on an interactive OpenStreetMap (Leaflet) map with OSRM street-tracing and detailed step-by-step fare cards.
 
 ---
 
@@ -11,7 +11,7 @@ It calculates travel paths across multiple transport modes (jeepneys, tricycles,
 - **Estimates Only:** All fares displayed are estimates based on published LTFRB rate matrices as of **March 2026** and may not reflect actual fares, driver rounding, locally negotiated rates, or future tariff hikes.
 - **Taxis:** Fares are computed via distance formula (`₱45 base + ₱13.50/km`) and are flagged as *regulated but variable by traffic conditions*.
 - **Motorcycle Taxis (MoveIt / Angkas):** Prices are represented solely as **wide estimate ranges** (min-max). They are *rough estimates, not sourced from any official rate table*, and surge pricing will apply in real-world scenarios.
-- **Manual Curation:** Routes and locations are manually curated for the PLV/Valenzuela area. Only legs defined in `routes.json` are processed.
+- **Curated Dataset:** Routes and locations are manually curated. Only legs defined in `routes.json` are processed. With 41 nodes and 316 routes, it covers all major schools, malls, parks, performance arenas, and transit interchanges in the region.
 
 ---
 
