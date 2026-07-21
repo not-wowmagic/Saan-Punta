@@ -92,3 +92,14 @@ Make sure you have [Node.js](https://nodejs.org/) installed.
    npm run dev
    ```
 4. Open the displayed local server link in your browser.
+
+---
+
+## ⚠️ Disclaimer: AI-Generated Project
+
+> **Notice:** This project was largely generated using Artificial Intelligence.
+
+* **Generation Tooling**: Built utilizing autonomous AI agents and generative tools.
+* **Code & Docs**: Codebase structure, functions, and documentation were machine-generated.
+
+
