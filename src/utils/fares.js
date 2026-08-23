@@ -6,6 +6,10 @@
  * Calculates traditional jeepney fare.
  * Formula: ₱14.00 for the first 4km, ₱2.00 per km thereafter.
  * 20% discount applies to student/senior/PWD.
+ *
+ * @param {number} distanceKm Leg distance in kilometers.
+ * @param {boolean} [isDiscounted] Concessionary discount eligibility.
+ * @returns {import('./types.js').FareResult}
  */
 export function calcTraditionalJeep(distanceKm, isDiscounted = false) {
   const baseFare = 14.00;
@@ -33,6 +37,10 @@ export function calcTraditionalJeep(distanceKm, isDiscounted = false) {
  * Calculates modern jeepney fare.
  * Formula: ₱17.00 for the first 4km, ₱2.40 per km thereafter.
  * 20% discount applies to student/senior/PWD.
+ *
+ * @param {number} distanceKm Leg distance in kilometers.
+ * @param {boolean} [isDiscounted] Concessionary discount eligibility.
+ * @returns {import('./types.js').FareResult}
  */
 export function calcModernJeep(distanceKm, isDiscounted = false) {
   const baseFare = 17.00;
@@ -61,6 +69,10 @@ export function calcModernJeep(distanceKm, isDiscounted = false) {
  * Tricycles have both:
  * 1. Shared / Regular: ₱10.00 base for first km + ₱2.50 per excess km.
  * 2. Special / Solo: Negotiated flat fare from leg data, or estimated based on distance (base ₱50.00 + ₱15.00/km excess of 2km).
+ *
+ * @param {import('./types.js').TransitLeg} leg
+ * @param {'shared'|'special'} [tricycleMode]
+ * @returns {import('./types.js').FareResult}
  */
 export function calcTricycle(leg, tricycleMode = 'shared') {
   if (tricycleMode === 'special') {
@@ -94,6 +106,11 @@ export function calcTricycle(leg, tricycleMode = 'shared') {
  * 1. Ordinary Bus: ₱15.00 base for first 5km + ₱2.49/km thereafter.
  * 2. Air-conditioned Bus: ₱18.00 base for first 5km + ₱2.98/km thereafter.
  * 20% discount applies to student/senior/PWD.
+ *
+ * @param {number} distanceKm Leg distance in kilometers.
+ * @param {'aircon'|'ordinary'} [busPreference]
+ * @param {boolean} [isDiscounted] Concessionary discount eligibility.
+ * @returns {import('./types.js').FareResult}
  */
 export function calcBus(distanceKm, busPreference = 'aircon', isDiscounted = false) {
   let baseFare = 18.00;
@@ -125,6 +142,9 @@ export function calcBus(distanceKm, busPreference = 'aircon', isDiscounted = fal
  * Calculates taxi fare.
  * Formula: ₱45 flagdown rate + ₱13.50 per km.
  * No discounts apply. Flagged as "regulated but variable by traffic".
+ *
+ * @param {number} distanceKm Leg distance in kilometers.
+ * @returns {import('./types.js').FareResult}
  */
 export function calcTaxi(distanceKm) {
   const flagdown = 45.00;
@@ -146,6 +166,11 @@ export function calcTaxi(distanceKm) {
  * SVC (Beep): Boarding + (Dist * 1.47) rounded to nearest ₱1. Min 19, Max 52.
  * SJT (Single Ticket): Boarding + (Dist * 1.47) rounded to nearest ₱5. Min 20, Max 55.
  * 20% discount applies to student/senior/PWD on the computed ticket rate.
+ *
+ * @param {number} distanceKm Leg distance in kilometers.
+ * @param {'svc'|'sjt'} [trainPreference]
+ * @param {boolean} [isDiscounted] Concessionary discount eligibility.
+ * @returns {import('./types.js').FareResult}
  */
 export function calcTrain(distanceKm, trainPreference = 'svc', isDiscounted = false) {
   const boardingFee = 16.25;
@@ -181,6 +206,9 @@ export function calcTrain(distanceKm, trainPreference = 'svc', isDiscounted = fa
  * Surge pricing means there is no fixed formula, and showing a single number is misleading.
  * We calculate and store ONLY as a wide estimate range (min-max).
  * No discounts apply. Labeled as "rough estimate, not sourced from any official rate".
+ *
+ * @param {number} distanceKm Leg distance in kilometers.
+ * @returns {import('./types.js').FareResult}
  */
 export function calcMoveItAngkas(distanceKm) {
   const minFare = 50 + (distanceKm * 10);
@@ -201,6 +229,11 @@ export function calcMoveItAngkas(distanceKm) {
 
 /**
  * Main calculator that routes to the specific mode.
+ *
+ * @param {import('./types.js').TransitLeg} leg
+ * @param {boolean} [isDiscounted] Concessionary discount eligibility.
+ * @param {import('./types.js').RoutingOptions} [options] Fare preferences.
+ * @returns {import('./types.js').FareResult}
  */
 export function calculateLegFare(leg, isDiscounted = false, options = {}) {
   const {
