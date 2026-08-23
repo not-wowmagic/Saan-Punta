@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "bench:routing": "vitest bench --run",
+    "typecheck": "tsc --noEmit",
+    "validate:data": "node scripts/validate-data.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
@@ -21,6 +26,9 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
     "oxlint": "^1.71.0",
-    "vite": "^8.1.1"
+    "typescript": "^7.0.2",
+    "vite": "^8.1.1",
+    "vitest": "^4.1.11",
+    "zod": "^4.4.3"
   }
 }
