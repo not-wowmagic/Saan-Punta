@@ -1,4 +1,4 @@
-# Saan Punta — Commute Route Finder & Fare Calculator
+# Saan Punta - Commute Route Finder & Fare Calculator
 
 **Saan Punta** is a highly optimized React + Vite point-to-point public transport commute route finder and fare calculator covering **41 major nodes** and **316 legs** across Metro Manila (Valenzuela, Caloocan, Manila, Quezon City, San Juan, Mandaluyong, Makati, Pasig, Marikina, Taguig/BGC, Pasay) and surrounding provinces (Bulacan and Rizal).
 
@@ -6,7 +6,7 @@ It calculates travel paths across multiple transport modes (jeepneys, modern e-j
 
 ---
 
-## ⚠️ Important Disclaimer
+## Important Disclaimer
 
 - **Estimates Only:** All fares displayed are estimates based on published LTFRB rate matrices as of **March 2026** and may not reflect actual fares, driver rounding, locally negotiated rates, or future tariff hikes.
 - **Taxis:** Fares are computed via distance formula (`₱45 base + ₱13.50/km`) and are flagged as *regulated but variable by traffic conditions*.
@@ -15,7 +15,7 @@ It calculates travel paths across multiple transport modes (jeepneys, modern e-j
 
 ---
 
-## 🛠️ Data Structure (`routes.json`)
+## Data Structure (`routes.json`)
 
 To add, edit, or customize locations (nodes) and transport connections (legs), modify the [routes.json](file:///src/data/routes.json) file located at `src/data/routes.json`. 
 
@@ -58,7 +58,7 @@ Legs connect two nodes together and specify the transit mode, route details, dis
 
 ---
 
-## 📈 Fare Logic Matrix
+## Fare Logic Matrix
 
 | Mode | Base Fare / Formula | Excess Fare / Rate | Special Discount Toggle | Notes / Warning |
 | :--- | :--- | :--- | :---: | :--- |
@@ -73,7 +73,7 @@ Legs connect two nodes together and specify the transit mode, route details, dis
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 Make sure you have [Node.js](https://nodejs.org/) installed.
@@ -95,7 +95,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed.
 
 ---
 
-## ⚠️ Disclaimer: AI-Generated Project
+## Disclaimer: AI-Generated Project
 
 > **Notice:** This project was largely generated using Artificial Intelligence.
 
