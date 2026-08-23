@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 import { Route } from 'lucide-react';
 import routesData from './data/routes.json';
-import { getSortedRoutes } from './utils/graph';
+import { findRouteAlternatives } from './utils/k-shortest';
+import { DEFAULT_PROFILE_ID } from './utils/profiles';
 import DisclaimerBanner from './components/DisclaimerBanner';
 import DisclaimerModal from './components/DisclaimerModal';
 import RouteSearch from './components/RouteSearch';
@@ -21,6 +22,7 @@ export default function App() {
   const [tricycleMode, setTricycleMode] = useState('shared');
   const [busPreference, setBusPreference] = useState('aircon');
   const [trainPreference, setTrainPreference] = useState('svc');
+  const [profileId, setProfileId] = useState(DEFAULT_PROFILE_ID);
   
   const [selectedRouteIndex, setSelectedRouteIndex] = useState(0);
   const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
@@ -35,12 +37,13 @@ export default function App() {
     if (!startNode || !destinationNode || startNode === destinationNode) {
       return [];
     }
-    return getSortedRoutes(legs, startNode, destinationNode, isDiscounted, {
+    return findRouteAlternatives(legs, startNode, destinationNode, isDiscounted, {
+      profileId,
       tricycleMode,
       busPreference,
       trainPreference
     });
-  }, [legs, startNode, destinationNode, isDiscounted, tricycleMode, busPreference, trainPreference]);
+  }, [legs, startNode, destinationNode, isDiscounted, profileId, tricycleMode, busPreference, trainPreference]);
 
   // Limit display to the top 15 routes to avoid performance/rendering lag
   const routes = useMemo(() => allRoutes.slice(0, 15), [allRoutes]);
@@ -48,7 +51,7 @@ export default function App() {
   // Reset selected route index when any routing input changes
   useEffect(() => {
     setSelectedRouteIndex(0);
-  }, [startNode, destinationNode, isDiscounted, tricycleMode, busPreference, trainPreference]);
+  }, [startNode, destinationNode, isDiscounted, profileId, tricycleMode, busPreference, trainPreference]);
 
   const activeRoute = routes[selectedRouteIndex] || null;
 
@@ -87,6 +90,8 @@ export default function App() {
             setBusPreference={setBusPreference}
             trainPreference={trainPreference}
             setTrainPreference={setTrainPreference}
+            profileId={profileId}
+            setProfileId={setProfileId}
           />
 
           <RouteList

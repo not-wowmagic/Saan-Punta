@@ -1,5 +1,6 @@
 import React, { useState, memo } from 'react';
 import { ArrowUpDown, GraduationCap, Settings, ChevronDown, ChevronUp } from 'lucide-react';
+import { PROFILE_LIST } from '../utils/profiles';
 import SearchableDropdown from './SearchableDropdown';
 
 function RouteSearch({
@@ -15,7 +16,9 @@ function RouteSearch({
   busPreference,
   setBusPreference,
   trainPreference,
-  setTrainPreference
+  setTrainPreference,
+  profileId,
+  setProfileId
 }) {
   const [isPreferencesOpen, setIsPreferencesOpen] = useState(false);
 
@@ -84,6 +87,8 @@ function RouteSearch({
           type="button"
           className="preferences-toggle-btn"
           onClick={() => setIsPreferencesOpen(!isPreferencesOpen)}
+          aria-expanded={isPreferencesOpen}
+          aria-controls="transport-preferences-content"
         >
           <span className="toggle-label-text">
             <Settings size={16} /> Fares & Transport Preferences
@@ -92,7 +97,31 @@ function RouteSearch({
         </button>
 
         {isPreferencesOpen && (
-          <div className="preferences-content animate-slide-down">
+          <div
+            className="preferences-content animate-slide-down"
+            id="transport-preferences-content"
+          >
+            <div className="preference-item">
+              <span className="preference-title" id="routing-profile-label">Routing Profile:</span>
+              <div
+                className="preference-options-row profile-options-row"
+                role="group"
+                aria-labelledby="routing-profile-label"
+              >
+                {PROFILE_LIST.map(profile => (
+                  <button
+                    key={profile.id}
+                    type="button"
+                    className={`pref-btn ${profileId === profile.id ? 'active' : ''}`}
+                    onClick={() => setProfileId(profile.id)}
+                    aria-pressed={profileId === profile.id}
+                  >
+                    {profile.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {/* Tricycle preference */}
             <div className="preference-item">
               <span className="preference-title">Tricycle Fare Mode:</span>

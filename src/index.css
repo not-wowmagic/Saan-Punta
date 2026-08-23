@@ -1022,8 +1022,9 @@ input:checked + .toggle-slider:before {
   .sidebar-panel {
     height: 60%;
     order: 2; /* Controls and cards stack below map */
-    overflow: hidden;
+    overflow-y: auto;
     padding-right: 0;
+    padding-bottom: 72px;
   }
   
   .app-header {
@@ -1258,6 +1259,15 @@ input:checked + .toggle-slider:before {
   border: 1px solid #1e293b;
 }
 
+.profile-options-row {
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.profile-options-row > .pref-btn {
+  min-width: max-content;
+}
+
 .pref-btn {
   flex: 1;
   background: transparent;
@@ -1270,6 +1280,11 @@ input:checked + .toggle-slider:before {
   cursor: pointer;
   transition: background-color var(--transition-fast), color var(--transition-fast);
   outline: none;
+}
+
+.pref-btn:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
 }
 
 .pref-btn:hover {
