@@ -13,7 +13,8 @@
     "test:watch": "vitest",
     "bench:routing": "vitest bench --run",
     "typecheck": "tsc --noEmit",
-    "validate:data": "node scripts/validate-data.mjs"
+    "validate:data": "node scripts/validate-data.mjs",
+    "build:vercel": "npm run build && npm run prerender"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
