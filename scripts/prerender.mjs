@@ -83,10 +83,15 @@ let executablePath;
 let launchArgs;
 let headless = true;
 if (process.platform === "linux") {
+  // Vercel is not Lambda, so @sparticuz/chromium does not auto-detect the
+  // environment. This flag makes it extract the AL2023 shared libraries and
+  // prepend them to LD_LIBRARY_PATH.
+  process.env.AWS_LAMBDA_JS_RUNTIME = "nodejs20.x";
   const { default: chromium } = await import("@sparticuz/chromium");
   executablePath = await chromium.executablePath();
   launchArgs = chromium.args;
   headless = chromium.headless;
+  console.log(`Chromium libraries: ${process.env.LD_LIBRARY_PATH ?? "unset"}`);
 } else {
   const candidates = [
     process.env.CHROME_PATH,
